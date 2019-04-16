@@ -11,8 +11,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Login Page</title>
-        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css"/>
-        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="Stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="Stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
     
     <body style="background-color: lightblue">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
