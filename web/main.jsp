@@ -14,7 +14,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/mbr-122x80.jpg" type="image/x-icon">
+  <!--<link rel="shortcut icon" href="assets/images/mbr-122x80.jpg" type="image/x-icon">-->
+  <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
   <meta name="description" content="Web Page Creator Description">
   
   <title>Page 1</title>
