@@ -7,33 +7,33 @@ and open the template in the editor.
  <!-- Users -->
 <users>
     <user>
-        <onlineMovieStoreID></onlineMovieStoreID>
-        <isStaff></isStaff>
-        <password></password>
-        <firstName></firstName>
-        <lastName></lastName>
-        <gender></gender>
-        <mobileNumber></mobileNumber>
+        <onlineMovieStoreID>1000001</onlineMovieStoreID>
+        <isStaff>False</isStaff>
+        <password>qwerty</password>
+        <firstName>Robb</firstName>
+        <lastName>Sitch</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0416911126</mobileNumber>
         <address>
-            <addressID></addressID>
-            <addressResidential></addressResidential>
-            <addressSuburb></addressSuburb>
-            <addressPostcode></addressPostcode>
-            <addressState></addressState>
+            <addressID>01</addressID>
+            <addressResidential>66 Stoney Valley</addressResidential>
+            <addressSuburb>Camden</addressSuburb>
+            <addressPostcode>2456</addressPostcode>
+            <addressState>NSW</addressState>
         </address>
-        <accountStatus></accountStatus>
-        <accountCredit></accountCredit>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>70.99</accountCredit>
         <paymentDetail>
-            <paymentID></paymentID>
-            <creditCardNumber></creditCardNumber>
-            <expiryDate></expiryDate>
-            <CCV></CCV>
-            <paymentType></paymentType>
-            <paymentDate></paymentDate>
+            <paymentID>01</paymentID>
+            <creditCardNumber>299283883</creditCardNumber>
+            <expiryDate>12/22</expiryDate>
+            <CCV>224</CCV>
+            <paymentType>Paypal</paymentType>
+            <paymentDate>22/04/19</paymentDate>
         </paymentDetail>
         <watchlist>
-            <watchlistID></watchlistID>
-            <comments></comments>
+            <watchlistID>01</watchlistID>
+            <comments>Movies</comments>
         </watchlist>
     </user>
 </users>

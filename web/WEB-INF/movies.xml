@@ -10,17 +10,110 @@ and open the template in the editor.
 <movies>
     <movie>
         <movieID>01</movieID>
-        <movieTitle></movieTitle>
-        <genre></genre>
-        <moviePrice></moviePrice>
-        <movieLength></movieLength>
-        <movieQuantity></movieQuantity>
-        <movieReleaseDate></movieReleaseDate>
-        <movieDescription></movieDescription>
+        <movieTitle>28 days later</movieTitle>
+        <genre>Horror</genre>
+        <moviePrice>19.96</moviePrice>
+        <movieLength>126</movieLength>
+        <movieQuantity>8</movieQuantity>
+        <movieReleaseDate>2002</movieReleaseDate>
+        <movieDescription>The naive activists ignore the pleas of a scientist to keep the cages locked, with disastrous results. 
+            Twenty-eight days later, our protagonist, Jim (Alex Palmer), wakes up from a coma, alone, in an abandoned hospital. 
+            He begins to seek out anyone else to find London is deserted, apparently without a living soul.</movieDescription>
         <rating>
-            <ratingID></ratingID>
-            <ratingIMDB></ratingIMDB>
-            <ratingRT></ratingRT>
+            <ratingID>01</ratingID>
+            <ratingIMDB>7</ratingIMDB>
+            <ratingRT>8</ratingRT>
         </rating>
     </movie>
+    
+    <movie>
+        <movieID>02</movieID>
+        <movieTitle>Alien vs Predator</movieTitle>
+        <genre>Sci-Fi</genre>
+        <moviePrice>10.00</moviePrice>
+        <movieLength>123</movieLength>
+        <movieQuantity>8</movieQuantity>
+        <movieReleaseDate>2004</movieReleaseDate>
+        <movieDescription>Directed by Paul W.S. Anderson, Alien vs. Predator follows billionaire Charles Bishop Weyland (Lance Henriksen) 
+            and his team of drillers, scientists, and archaeologists, to an obscure pyramid site in Antarctica. 
+            Among the icy ruins, allegedly, lies the proof of an empire predating humankind.</movieDescription>
+        <rating>
+            <ratingID>02</ratingID>
+            <ratingIMDB>7</ratingIMDB>
+            <ratingRT>8</ratingRT>
+        </rating>
+    </movie>
+    
+    <movie>
+        <movieID>03</movieID>
+        <movieTitle>Anchorman</movieTitle>
+        <genre>Comedy</genre>
+        <moviePrice>11.50</moviePrice>
+        <movieLength>110</movieLength>
+        <movieQuantity>8</movieQuantity>
+        <movieReleaseDate>2004</movieReleaseDate>
+        <movieDescription>Ron Burgundy is the top-rated anchorman in San Diego in the '70s. When feminism marches into the 
+            newsroom in the form of ambitious newswoman Veronica Corningstone, Ron is willing to play along at first-as long as 
+            Veronica stays in her place, covering cat fashion shows, cooking, and other "female" interests.</movieDescription>
+        <rating>
+            <ratingID>03</ratingID>
+            <ratingIMDB>8</ratingIMDB>
+            <ratingRT>88</ratingRT>
+        </rating>
+    </movie>
+    
+     <movie>
+        <movieID>04</movieID>
+        <movieTitle>Baby Driver</movieTitle>
+        <genre>Action</genre>
+        <moviePrice>22.99</moviePrice>
+        <movieLength>142</movieLength>
+        <movieQuantity>2</movieQuantity>
+        <movieReleaseDate>2017</movieReleaseDate>
+        <movieDescription>Baby Driver is a 2017 crime film written and directed by Edgar Wright. The plot follows Baby (Ansel Elgort), 
+            a music lover who is coerced to work as a getaway driver for kingpin Doc (Kevin Spacey).</movieDescription>
+        <rating>
+            <ratingID>04</ratingID>
+            <ratingIMDB>8</ratingIMDB>
+            <ratingRT>88</ratingRT>
+        </rating>
+    </movie>
+    
+    
+    <movie>
+        <movieID>05</movieID>
+        <movieTitle>Back to the future</movieTitle>
+        <genre>Sci-Fi</genre>
+        <moviePrice>12.99</moviePrice>
+        <movieLength>142</movieLength>
+        <movieQuantity>3</movieQuantity>
+        <movieReleaseDate>1985</movieReleaseDate>
+        <movieDescription>Marty accidentally activates the time machine, sending him back to 1955 where he accidentally gets in the way of 
+            his teenage parents meeting. Marty must find a way to convince Doc that he is from the future, reunite his parents, 
+            and ultimately get back to the future.</movieDescription>
+        <rating>
+            <ratingID>05</ratingID>
+            <ratingIMDB>9</ratingIMDB>
+            <ratingRT>88</ratingRT>
+        </rating>
+    </movie>
+    
+        <movie>
+        <movieID>06</movieID>
+        <movieTitle>Batman Begins</movieTitle>
+        <genre>Sci-Fi</genre>
+        <moviePrice>17.01</moviePrice>
+        <movieLength>189</movieLength>
+        <movieQuantity>2</movieQuantity>
+        <movieReleaseDate>2005</movieReleaseDate>
+        <movieDescription>A young Bruce Wayne (Christian Bale) travels to the Far East, where he's trained in the martial arts by Henri Ducard (Liam Neeson),
+            a member of the mysterious League of Shadows. When Ducard reveals the League's true purpose -- the complete destruction of Gotham City -- 
+            Wayne returns to Gotham intent on cleaning up the city without resorting to murder. </movieDescription>
+        <rating>
+            <ratingID>06</ratingID>
+            <ratingIMDB>9</ratingIMDB>
+            <ratingRT>77</ratingRT>
+        </rating>
+    </movie>
+    
 </movies>
