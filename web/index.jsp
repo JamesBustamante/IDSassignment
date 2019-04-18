@@ -19,7 +19,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-        
+
         <section>
             <div class="container">
                 <div class="col-md-10 offset-md-3 text-right mt-2">
@@ -28,14 +28,14 @@
                 <div class="col-md-6 offset-md-3 text-center">
                     <h1 class="display-4"><b>Online Movie System</b></h1>
                     <div class="info-form">
-                        <form action="main.jsp" method="GET" class="form-inlin justify-content-center">
+                        <form action="loginAction.jsp" method="POST" class="form-inlin justify-content-center">
                             <div class="form-group">
                                 <!--<label>Email</label>-->
-                                <input type="email" class="form-control" placeholder="Enter Email"/><br/>
+                                <input type="email" class="form-control" placeholder="Enter Email" name="email"/><br/>
                             </div>
                             <div class="form-group">
                                 <!--<label>Password</label>-->
-                                <input type="password" class="form-control" placeholder="Password"/>
+                                <input type="password" class="form-control" placeholder="Password" name="password"/>
                             </div>
                             <button type="submit" class="btn btn-primary">Login</button>
                         </form>

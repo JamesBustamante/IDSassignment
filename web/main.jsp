@@ -4,6 +4,7 @@
     Author     : Ciaran
 --%>
 
+<%@page import="uts.ids.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -51,7 +52,7 @@ h1 {
 </style>
   <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
 
-    
+    <% User user = (User) session.getAttribute("user"); %>
 
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +83,7 @@ h1 {
                 </li><li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span>
                         Contact Us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li><li class="nav-item dropdown"><a class="nav-link link text-white display-4" ><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span>
                         Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="index.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
                     
                     Logout</a></div>
         </div>
@@ -98,9 +99,10 @@ h1 {
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-10 align-center">
+                <% if (user != null) { %>
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
-                    Welcome {User Name}</h1>
-                
+                    Welcome <%= user.getName()%></h1>
+                <% } %>
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Pruchase Movies below</p>
                 
             </div>

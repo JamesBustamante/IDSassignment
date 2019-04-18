@@ -25,20 +25,28 @@
                     <div class="offset-3">
                         <h1 class="display-3"><b>Register</b></h1>
                     </div>
+                    
+                    <div class="offset-1">
+                        Enter your details below to register for the Movie Store<br>
+                        <br>
+                    </div>
 
                     <div class="form-group">
                         <form action="register-action.jsp" method="POST">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name"/><br>
+                                <input type="text" class="form-control" placeholder="Name" name="name"/><br>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email"/><br>
+                                <input type="text" class="form-control" placeholder="Email" name="email"/><br>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password"/><br>
+                                <input type="password" class="form-control" placeholder="Password" name="password"/><br>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="DOB"/><br>
+                                <input type="text" class="form-control" placeholder="DOB" name="dob"/><br>
+                            </div>
+                            <div class="form-group">
+                                <h5>Agree to terms of service &nbsp &nbsp<input type="checkbox" name="tos" class="form-group" value="check"><br></h5>
                             </div>
                             <div class="col-6 offset-md-5">
                             <input type="submit" class="btn btn-primary"/>
