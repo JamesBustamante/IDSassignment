@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <!-- Users -->
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="onlineMovieStoreID" type="xs:postiveInteger" />
+                            <xs:element name="isStaff" type="xs:boolean"  default="false"/>
+                            <xs:element name="password" type="xs:string"/>
+                            <xs:element name="firstName" type="xs:string"/>
+                            <xs:element name="lastName" type="xs:string"/>
+                            <xs:element name="gender" type="xs:string"/>
+                            <xs:element name="mobileNumber" type="xs:integer"/>
+                            
+                            <!-- Address -->
+                            <xs:element name="address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="addressID" type="xs:postiveInteger"/>
+                                        <xs:element name="addressResidential" type="xs:string"/>
+                                        <xs:element name="addressSuburb" type="xs:string"/>
+                                        <xs:element name="addressPostcode" type="xs:integer"/>
+                                        <xs:element name="addressState" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="accountStatus" type="xs:string"/>
+                            <xs:element name="accountCredit" type="xs:decimal"/> 
+                            
+                            <!-- Payment Details -->
+                            <xs:element name="paymentDetail">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="paymentID" type="xs:postiveInteger"/>
+                                        <xs:element name="creditCardNumber" type="xs:integer"/>
+                                        <xs:element name="expiryDate" type="xs:integer"/>
+                                        <xs:element name="CCV" type="xs:integer"/>
+                                        <xs:element name="paymentType" type="xs:string"/>
+                                        <xs:element name="paymentDate" type="xs:date"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Watchlist -->
+                            <xs:element name="watchlist">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="watchlistID" type="xs:postiveInteger"/>
+                                        <xs:element name="comments" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Transcations -->
+    <xs:element name="transactions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="transcation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="transactionID" type="xs:postiveInteger"/>
+                            <xs:element name="transactionDate" type="xs:date"/>
+                            <xs:element name="paymentAmount" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Cancel Order Requests -->
+    <xs:element name="cancelOrderRequests">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cancelOrderRequest">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cancelID" type="xs:postiveInteger"/>
+                            <xs:element name="cancelReason" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Orders -->
+    <xs:element name="orders">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="order">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="orderID" type="xs:integer"/>
+                            <xs:element name="onlineMovieStoreID" type="xs:postiveInteger"/>
+                            <xs:element name="orderDate" type="xs:date"/>
+                            <xs:element name="orderStatus" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Movies -->
+    <xs:element name="movies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="movieID" type="xs:postiveInteger"/>
+                            <xs:element name="movieTitle" type="xs:string"/>
+                            <xs:element name="genre" type="xs:string"/>
+                            <xs:element name="moviePrice" type="xs:decimal"/>
+                            <xs:element name="movieLength" type="xs:Integer"/>
+                            <xs:element name="movieQuantity" type="xs:postiveInteger"/>
+                            <xs:element name="movieReleaseDate" type="xs:date"/>
+                            <xs:element name="movieDescription" type="xs:string"/>
+                            
+                            <!-- Rating -->
+                            <xs:element name="rating">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ratingID" type="xs:postiveInteger"/>
+                                        <xs:element name="ratingIMDB" type="xs:integer"/>
+                                        <xs:element name="ratingRT" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>   
+</xs:schema>
