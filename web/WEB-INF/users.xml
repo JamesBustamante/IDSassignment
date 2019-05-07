@@ -8,7 +8,7 @@ and open the template in the editor.
 <users>
     <user>
         <onlineMovieStoreID>1000001</onlineMovieStoreID>
-        <isStaff>False</isStaff>
+        <isStaff>false</isStaff>
         <password>qwerty</password>
         <firstName>Robb</firstName>
         <lastName>Sitch</lastName>
@@ -23,7 +23,10 @@ and open the template in the editor.
         </address>
         <accountStatus>Active</accountStatus>
         <accountCredit>70.99</accountCredit>
-        <paymentDetail>
+    </user>
+</users>
+<!--
+ <paymentDetail>
             <paymentID>01</paymentID>
             <creditCardNumber>299283883</creditCardNumber>
             <expiryDate>12/22</expiryDate>
@@ -35,5 +38,4 @@ and open the template in the editor.
             <watchlistID>01</watchlistID>
             <comments>Movies</comments>
         </watchlist>
-    </user>
-</users>
+-->
