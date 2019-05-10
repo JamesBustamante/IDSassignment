@@ -33,8 +33,15 @@
 
                     <div class="form-group">
                         <form action="register-action.jsp" method="POST">
+                            <h3>Personal Details</h3>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name" name="name"/><br>
+                                <input type="text" class="form-control" placeholder="First Name" name="firstName"/><br>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Last Name" name="lastName"/><br>
+                            </div>
+                            <div class="form-group">
+                                <h5>Gender &nbsp &nbsp<input type="radio"   name="gender" value="male" checked> Male  <input type="radio"  name="gender" value="female"> Female<br></h5>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Email" name="email"/><br>
@@ -43,11 +50,25 @@
                                 <input type="password" class="form-control" placeholder="Password" name="password"/><br>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="DOB" name="dob"/><br>
+                                <input type="text" class="form-control" placeholder="mobile Number" name="mobileNumber"/><br>
+                            </div>
+                            <h3>Address Details</h3>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Street Address" name="addressResidential"/><br>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Suburb" name="addressSuburb"/><br>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Postcode" name="addressPostcode"/><br>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="State" name="addressState"/><br>
                             </div>
                             <div class="form-group">
                                 <h5>Agree to terms of service &nbsp &nbsp<input type="checkbox" name="tos" class="form-group" value="check"><br></h5>
                             </div>
+                            
                             <div class="col-6 offset-md-5">
                             <input type="submit" class="btn btn-primary"/>
                             </div>

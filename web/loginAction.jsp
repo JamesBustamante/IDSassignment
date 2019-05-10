@@ -4,6 +4,7 @@
     Author     : james
 --%>
 
+<%@page import="uts.ids.Users"%>
 <%@page import="uts.ids.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,18 +21,27 @@
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     </head>
-    <body>
-        <% String email = request.getParameter("email");  //gets email and password from login.jsp once entered by user
-            String password = request.getParameter("password"); %>
-            <% if (email.equalsIgnoreCase("robb@gmail.com") && password.equalsIgnoreCase("qwerty")) {
-               User user = new User("Robb",email,password,"1999","12900926");
-            session.setAttribute("user",user);
-                response.sendRedirect("main.jsp");
-            } else {  %>
-            <div class="row">
-                <div class="col-md-6 offset-3"><a href="index.jsp"><h2>Invalid Login. Click here to try again</h2></a></div>
-            </div>
-
-             <%}%>
+        <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
+        <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
+            <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
+        </jsp:useBean>
+        
+        <%
+            String email = request.getParameter("email");  //gets email and password from login.jsp once entered by user
+            String password = request.getParameter("password"); 
+             Users users = UserApplication.getUsers();
+            User loginUser = users.login(email, password);
+            if (loginUser != null) {
+                session.setAttribute("user", loginUser);
+                if  (loginUser.getIsStaff().equalsIgnoreCase("false")) {
+        %>
+         <p>Login successful. Click <a href="main.jsp">here</a> to enter the main page.</p>
+         <%}  else {%>
+         <p>Login successful. Click <a href="mainstaff.jsp">here</a> to enter staff page.</p> <% } %>
+         <% } else {
+                    session.setAttribute("Error", "NULL"); %>
+           <p>Login incorrect. Click <a href="index.jsp">here</a> to try again.</p>         
+            <% }%>
+           
     </body>
 </html>

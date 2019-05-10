@@ -9,18 +9,16 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000001</onlineMovieStoreID>
         <isStaff>false</isStaff>
+        <email>robb@gmail.com</email>
         <password>qwerty</password>
         <firstName>Robb</firstName>
         <lastName>Sitch</lastName>
         <gender>Male</gender>
         <mobileNumber>0416911126</mobileNumber>
-        <address>
-            <addressID>01</addressID>
-            <addressResidential>66 Stoney Valley</addressResidential>
-            <addressSuburb>Camden</addressSuburb>
-            <addressPostcode>2456</addressPostcode>
-            <addressState>NSW</addressState>
-        </address>
+        <addressResidential>66 Stoney Valley</addressResidential>
+        <addressSuburb>Camden</addressSuburb>
+         <addressPostcode>2456</addressPostcode>
+         <addressState>NSW</addressState>
         <accountStatus>Active</accountStatus>
         <accountCredit>70.99</accountCredit>
     </user>

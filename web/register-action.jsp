@@ -4,7 +4,7 @@
     Author     : Ciaran
 --%>
 
-<%@page import="uts.ids.User"%>
+<%@page import="uts.ids.*"%>
 <%@page import="java.util.Random"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,39 +22,25 @@
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
         
         <%
-        String name = request.getParameter("name");
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+       String gender = request.getParameter("gender");
         String email = request.getParameter("email");
-        String dob = request.getParameter("dob");
         String password = request.getParameter("password");
+        String mobileNumber = request.getParameter("mobileNumber");
+        String addressResidential = request.getParameter("addressResidential");
+        String addressSuburb = request.getParameter("addressSuburb");
+        String addressPostcode = request.getParameter("addressPostcode");
+        String addressState = request.getParameter("addressState");
         String tos = request.getParameter("tos");
         int key = (new Random()).nextInt(999999);
         String userID = "" + key;
-        %>
         
-        <% if(tos != null) { 
-            User user = new User(name,email,password,dob,userID);
-            session.setAttribute("user",user);
+       User user = new User(userID, "false", email, password, firstName, lastName,  gender, mobileNumber, addressResidential, addressSuburb, addressPostcode, addressState, "active", "300.00"); //assigns a new user
+                session.setAttribute("user", user);
+                session.setAttribute("tos", tos);
+                response.sendRedirect("welcomePage.jsp");
         %>
-                    
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-3"><h1>Welcome to the movie store</h1></div>
-                <div class="col-md-6 offset-3"><h1 style="text-align:center;"><%= name %>!</h1></div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 offset-3"><a href="main.jsp"><h2>Click here to go to the main page</h2></a></div>
-            </div>
-        </div>
-                <% } else { %>
-                <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-3"><h1>You did not accept the terms of service</h1></div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 offset-3"><a href="register.jsp"><h2>Click here to go to register again</h2></a></div>
-            </div>
-        </div>
-                <% } %>
+                   
     </body>
 </html>

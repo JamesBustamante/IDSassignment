@@ -30,10 +30,16 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
-  
+  <%@page import="uts.ids.*" contentType="text/html" %>
   
 </head>
 <body>
+    <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
+        <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
+            <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
+        </jsp:useBean>
+        
+      
     <style>
 body {
   background-color: linen;
@@ -101,7 +107,7 @@ h1 {
             <div class="col-md-10 align-center">
                 <% if (user != null) { %>
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
-                    Welcome <%= user.getName()%></h1>
+                    Welcome <%= user.getFirstName()%></h1>
                 <% } %>
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Pruchase Movies below</p>
                 
