@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="movieTable.xsl"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
-<!-- Movies -->
+<?xml version="1.0" encoding="UTF-8" ?>
 <movies>
     <movie>
-        <movieID>01</movieID>
+        <movieID>1</movieID>
         <movieTitle>28 days later</movieTitle>
         <genre>Horror</genre>
         <moviePrice>19.96</moviePrice>
@@ -22,11 +13,10 @@ and open the template in the editor.
             He begins to seek out anyone else to find London is deserted, apparently without a living soul.</movieDescription>
         <ratingIMDB>7</ratingIMDB>
         <ratingRT>8</ratingRT>
-        <picture></picture>
+        <picture>pictures/28-weeks-later-poster01-1-.jpg</picture>
     </movie>
-    
     <movie>
-        <movieID>02</movieID>
+        <movieID>2</movieID>
         <movieTitle>Alien vs Predator</movieTitle>
         <genre>Sci-Fi</genre>
         <moviePrice>10.00</moviePrice>
@@ -38,11 +28,10 @@ and open the template in the editor.
             Among the icy ruins, allegedly, lies the proof of an empire predating humankind.</movieDescription>
         <ratingIMDB>7</ratingIMDB>
         <ratingRT>8</ratingRT>
-        <picture></picture>
+        <picture>pictures/alienvpredator.jpg</picture>
     </movie>
-    
     <movie>
-        <movieID>03</movieID>
+        <movieID>3</movieID>
         <movieTitle>Anchorman</movieTitle>
         <genre>Comedy</genre>
         <moviePrice>11.50</moviePrice>
@@ -54,11 +43,10 @@ and open the template in the editor.
             Veronica stays in her place, covering cat fashion shows, cooking, and other "female" interests.</movieDescription>
         <ratingIMDB>8</ratingIMDB>
         <ratingRT>88</ratingRT>
-        <picture></picture>
+        <picture>pictures/anchor.jpg</picture>
     </movie>
-    
     <movie>
-        <movieID>04</movieID>
+        <movieID>4</movieID>
         <movieTitle>Baby Driver</movieTitle>
         <genre>Action</genre>
         <moviePrice>22.99</moviePrice>
@@ -69,12 +57,10 @@ and open the template in the editor.
             a music lover who is coerced to work as a getaway driver for kingpin Doc (Kevin Spacey).</movieDescription>
         <ratingIMDB>8</ratingIMDB>
         <ratingRT>88</ratingRT>
-        <picture></picture>
+        <picture>pictures/Baby-Driver-366390-Detail.jpg</picture>
     </movie>
-    
-    
     <movie>
-        <movieID>05</movieID>
+        <movieID>5</movieID>
         <movieTitle>Back to the future</movieTitle>
         <genre>Sci-Fi</genre>
         <moviePrice>12.99</moviePrice>
@@ -86,11 +72,10 @@ and open the template in the editor.
             and ultimately get back to the future.</movieDescription>
         <ratingIMDB>9</ratingIMDB>
         <ratingRT>88</ratingRT>
-        <picture></picture>
+        <picture>pictures/64-og.jpg</picture>
     </movie>
-    
     <movie>
-        <movieID>06</movieID>
+        <movieID>6</movieID>
         <movieTitle>Batman Begins</movieTitle>
         <genre>Sci-Fi</genre>
         <moviePrice>17.01</moviePrice>
@@ -102,7 +87,6 @@ and open the template in the editor.
             Wayne returns to Gotham intent on cleaning up the city without resorting to murder. </movieDescription>
         <ratingIMDB>9</ratingIMDB>
         <ratingRT>77</ratingRT>
-        <picture></picture>
+        <picture>pictures/Batman_Begins.jpg</picture>
     </movie>
-    
 </movies>
