@@ -49,7 +49,6 @@
         <tr>
             <td>
                 <img src="{picture}" align="left" height="120" width="85" />
-                
             </td>
             <td>
                 <xsl:value-of select="movieTitle"/>
@@ -64,7 +63,7 @@
                 $<xsl:value-of select="moviePrice"/>
             </td>
             <td>
-                <form action="viewMovie.jsp" method="get">   <!--Creates the button to view movie in more specific detail-->
+                <form action="descriptionPage.jsp" method="get">   <!--Creates the button to view movie in more specific detail-->
                         <input type="hidden" name="id" value="{movieTitle}"/>
                         <input type="submit" value="Select" name="select"/>
                 </form>

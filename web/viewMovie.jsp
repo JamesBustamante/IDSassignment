@@ -17,6 +17,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+
 <%
     String id = request.getParameter("id");
     Movies movies = catalogueApp.getMovies();
@@ -25,9 +26,28 @@
     for (Movie movie : allMovies) {
         if (movie.getMovieTitle().equalsIgnoreCase(id)) {
             match.add(movie);
+                    break;
         }
-        break;
     }
-    
-
+   
 %>
+
+    <c:set var = "xmltext"> 
+    <movies> 
+        <% for (Movie movie : match) {
+        %>
+        <movie>
+            <movieTitle><%= movie.getMovieTitle()%></movieTitle>
+            <genre><%=movie.getGenre()%></genre>
+            <movieReleaseDate><%=movie.getMovieReleaseDate()%></movieReleaseDate>
+            <moviePrice><%=movie.getMoviePrice()%></moviePrice>
+            <movieQuantity><%=movie.getMovieQuantity()%></movieQuantity>
+            <picture><%=movie.getPicture()%></picture>
+            <movieDescription><%=movie.getPicture()%></movieDescription>
+        </movie>
+        <%}
+        %>
+    </movies>
+</c:set>
+<c:import url = "movie.xsl" var = "xslt"/>
+<x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>
