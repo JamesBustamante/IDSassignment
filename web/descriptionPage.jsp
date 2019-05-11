@@ -118,19 +118,10 @@ h1 {
 </section>
 
 <section class="services6 cid-rnOnfBSE9i" id="services6-8">
-    <!---->
-    
-    <!---->
-    <!--Overlay-->
-    
-    <!--Container-->
+
     <div class="container">
         <div class="row">
-            <!--Titles-->
-            <div class="title col-12">
-                <h2 class="align-left mbr-fonts-style m-0 display-1">Movie Detail</h2>
 
-            </div>
             
             
             

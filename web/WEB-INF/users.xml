@@ -22,6 +22,22 @@ and open the template in the editor.
         <accountStatus>Active</accountStatus>
         <accountCredit>70.99</accountCredit>
     </user>
+    <user>
+        <onlineMovieStoreID>100002</onlineMovieStoreID>
+        <isStaff>true</isStaff>
+        <email>staff@mail.com</email>
+        <password>1234</password>
+        <firstName>Robb</firstName>
+        <lastName>Sitch</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0416911126</mobileNumber>
+        <addressResidential>66 Stoney Valley</addressResidential>
+        <addressSuburb>Camden</addressSuburb>
+         <addressPostcode>2456</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>70.99</accountCredit>
+    </user>
 </users>
 <!--
  <paymentDetail>

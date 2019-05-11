@@ -43,7 +43,8 @@
             <moviePrice><%=movie.getMoviePrice()%></moviePrice>
             <movieQuantity><%=movie.getMovieQuantity()%></movieQuantity>
             <picture><%=movie.getPicture()%></picture>
-            <movieDescription><%=movie.getPicture()%></movieDescription>
+            <movieDescription><%=movie.getMovieDescription()%></movieDescription>
+            <movieLength><%=movie.getMovieLength()%></movieLength>
         </movie>
         <%}
         %>
