@@ -25,4 +25,11 @@ public class Movies implements Serializable {
     public ArrayList<Movie> getMovies() {
         return movies;
     }
+    
+    public Movie getMoviebyID(String ID){
+        for(Movie movie:movies)
+            if(movie.getMovieID().equalsIgnoreCase(ID))
+                return movie;
+        return null;
+    }
 }

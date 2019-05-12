@@ -116,26 +116,47 @@ h1 {
     </div>
 
 </section>
-<div >
-    <form action="manageCatalog.jsp" align="center"  type="button" class="btn btn-primary">
-    <input type="submit" value="Manage Catalog" />
-</form>
-<button type="button" class="btn btn-primary" href="logout.jsp">Manage Catalog</button>
-<button type="button" class="btn btn-primary">Add New Movie to Catalog</button>
-</div>
 
-<style type="text/css">
-  #footer {
-    position : absolute;
-    bottom : 0;
-    height : 1px;
-    width: 100%;
-  }
-</style>
-<section once="footers" class="cid-rnOnTVUo9Q" id="footer">
+<section class="services6 cid-rnOnfBSE9i" id="services6-8">
+    <!---->
+    
+    <!---->
+    <!--Overlay-->
+    
+    <!--Container-->
+    <div class="container">
+        <div class="row">
+            <!--Titles-->
+            <div class="title col-12">
+                <h2 class="align-left mbr-fonts-style m-0 display-1">Movie Catalogue</h2>
+                
+                
+                
+                <h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5">
+                    From Most Popular</h3>
+                
+                                <!-- Search form -->
+<form class="form-inline">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+</form>
+            </div>
+            
+            
+            
+        <jsp:include page="displayCatalogAdmin.jsp" flush="true" />
+    
+</section>
+
+<section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
+
+    
+
+    
+
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-            <div>
+            <div class="col-12">
                 <p class="mbr-text mb-0 mbr-fonts-style display-7">
                     © Copyright 2019 Created By Ciaran, Ed, James & Max
                 </p>
@@ -143,8 +164,6 @@ h1 {
         </div>
     </div>
 </section>
-
-
 
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
