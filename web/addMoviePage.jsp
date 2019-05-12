@@ -116,28 +116,34 @@ h1 {
     </div>
 
 </section>
-<div >
-    <form action="manageCatalog.jsp" align="center"  type="button" class="btn btn-primary">
-    <input type="submit" value="Manage Catalogue" />
-</form>
-    <form action="addMoviePage.jsp" align="center"  type="button" class="btn btn-primary">
-    <input type="submit" value="Add Movie To Catalogue" />
-</form>
-<button type="button" class="btn btn-primary">Add New Movie to Catalog</button>
-</div>
 
-<style type="text/css">
-  #footer {
-    position : absolute;
-    bottom : 0;
-    height : 1px;
-    width: 100%;
-  }
-</style>
-<section once="footers" class="cid-rnOnTVUo9Q" id="footer">
+<section class="services6 cid-rnOnfBSE9i" id="services6-8">
+    <!---->
+    
+    <!---->
+    <!--Overlay-->
+    
+    <!--Container-->
+    <div class="container">
+        <div class="row">
+            <!--Titles-->
+            
+            
+            
+            
+        <jsp:include page="addMovie.jsp" flush="true" />
+    
+</section>
+
+<section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
+
+    
+
+    
+
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-            <div>
+            <div class="col-12">
                 <p class="mbr-text mb-0 mbr-fonts-style display-7">
                     © Copyright 2019 Created By Ciaran, Ed, James & Max
                 </p>
@@ -145,8 +151,6 @@ h1 {
         </div>
     </div>
 </section>
-
-
 
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>

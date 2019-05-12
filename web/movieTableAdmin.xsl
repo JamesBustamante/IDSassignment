@@ -63,7 +63,7 @@
                 $<xsl:value-of select="moviePrice"/>
             </td>
             <td>
-                <form action="editMovie.jsp" method="get">   <!--Creates the button to view movie in more specific detail-->
+                <form action="editMoviePage.jsp" method="get">   <!--Creates the button to view movie in more specific detail-->
                         <input type="hidden" name="id" value="{movieID}"/>
                         <input type="submit" value="Select" name="select"/>
                 </form>

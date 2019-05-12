@@ -32,4 +32,12 @@ public class Movies implements Serializable {
                 return movie;
         return null;
     }
+    
+     public void removeMovie(Movie movie) {
+        movies.remove(movie);
+    }
+     
+     public void addMovie(Movie movie) {
+        movies.add(movie);
+    }
 }

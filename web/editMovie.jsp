@@ -28,7 +28,34 @@
     ArrayList<Movie> allMovies = movies.getMovies();
     Movie myMovieMatch = movies.getMoviebyID(id);
 %>
-<form action="editMovie.jsp" method="POST">
+<% //This handles the details that are updated
+            if(request.getParameter("updated") != null){
+              
+                myMovieMatch.setMovieTitle(request.getParameter("movieTitle"));
+                myMovieMatch.setGenre(request.getParameter("genre"));
+                myMovieMatch.setMoviePrice(request.getParameter("moviePrice"));
+                myMovieMatch.setMovieLength(request.getParameter("movieLength"));
+                myMovieMatch.setMovieQuantity(request.getParameter("movieQuantity"));
+                myMovieMatch.setMovieReleaseDate(request.getParameter("movieReleaseDate"));
+                myMovieMatch.setMovieDescription(request.getParameter("movieDescription"));
+                movies = catalogueApp.getMovies();
+            
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieTitle(request.getParameter("movieTitle"));
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setGenre(request.getParameter("genre"));
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setMoviePrice(request.getParameter("moviePrice"));
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieLength(request.getParameter("movieLength"));
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieQuantity(request.getParameter("movieQuantity"));
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieReleaseDate(request.getParameter("movieReleaseDate"));
+                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieDescription(request.getParameter("movieDescription"));
+                
+                catalogueApp.updateXML(movies, filePath);
+                
+
+                %><p>Changes Saved</p><%                
+            }   
+        %>         
+
+<form action="editMoviePage.jsp" method="POST">
     <table  cellpadding = "9">
 	<tbody>
 		<tr>
@@ -63,33 +90,9 @@
 </form>
                 
                 <form action="removeMovie.jsp">
+                    <input type="hidden" name="id" value="<%= myMovieMatch.getMovieID()%>"/>
                 <input type="submit" name="cancel" value="X Remove Movie X"/>
             </form>
-                <% //This handles the details that are updated
-            if(request.getParameter("updated") != null){
-              
-                myMovieMatch.setMovieTitle(request.getParameter("movieTitle"));
-                myMovieMatch.setGenre(request.getParameter("genre"));
-                myMovieMatch.setMoviePrice(request.getParameter("moviePrice"));
-                myMovieMatch.setMovieLength(request.getParameter("movieLength"));
-                myMovieMatch.setMovieQuantity(request.getParameter("movieQuantity"));
-                myMovieMatch.setMovieReleaseDate(request.getParameter("movieReleaseDate"));
-                myMovieMatch.setMovieDescription(request.getParameter("movieDescription"));
-                movies = catalogueApp.getMovies();
-            
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieTitle(request.getParameter("movieTitle"));
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setGenre(request.getParameter("genre"));
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setMoviePrice(request.getParameter("moviePrice"));
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieLength(request.getParameter("movieLength"));
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieQuantity(request.getParameter("movieQuantity"));
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieReleaseDate(request.getParameter("movieReleaseDate"));
-                movies.getMoviebyID(myMovieMatch.getMovieID()).setMovieDescription(request.getParameter("movieDescription"));
                 
-                catalogueApp.updateXML(movies, filePath);
-                
-
-                %><p>Changes Saved</p><%                
-            }   
-        %>         
     </body>
 </html>
