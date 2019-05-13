@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <!-- Users -->
+<users>
+    <user>
+        <onlineMovieStoreID>1000001</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>robb@gmail.com</email>
+        <password>qwerty</password>
+        <firstName>Robb</firstName>
+        <lastName>Sitch</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0416911126</mobileNumber>
+        <addressResidential>66 Stoney Valley</addressResidential>
+        <addressSuburb>Camden</addressSuburb>
+         <addressPostcode>2456</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>70.99</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>100002</onlineMovieStoreID>
+        <isStaff>true</isStaff>
+        <email>staff@mail.com</email>
+        <password>1234</password>
+        <firstName>Robb</firstName>
+        <lastName>Sitch</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0416911126</mobileNumber>
+        <addressResidential>66 Stoney Valley</addressResidential>
+        <addressSuburb>Camden</addressSuburb>
+         <addressPostcode>2456</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>70.99</accountCredit>
+    </user>
+</users>
+<!--
+ <paymentDetail>
+            <paymentID>01</paymentID>
+            <creditCardNumber>299283883</creditCardNumber>
+            <expiryDate>12/22</expiryDate>
+            <CCV>224</CCV>
+            <paymentType>Paypal</paymentType>
+            <paymentDate>22/04/19</paymentDate>
+        </paymentDetail>
+        <watchlist>
+            <watchlistID>01</watchlistID>
+            <comments>Movies</comments>
+        </watchlist>
+-->

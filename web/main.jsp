@@ -4,6 +4,7 @@
     Author     : Ciaran
 --%>
 
+<%@page import="uts.ids.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -14,7 +15,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<<<<<<< HEAD
   <link rel="shortcut icon" href="assets/images/mbr-122x80.jpg" type="image/x-icon">
+=======
+  <!--<link rel="shortcut icon" href="assets/images/mbr-122x80.jpg" type="image/x-icon">-->
+  <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
+>>>>>>> origin/NEW
   <meta name="description" content="Web Page Creator Description">
   
   <title>Page 1</title>
@@ -28,10 +34,23 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
+<<<<<<< HEAD
   
   
 </head>
 <body>
+=======
+  <%@page import="uts.ids.*" contentType="text/html" %>
+  
+</head>
+<body>
+    <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
+        <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
+            <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
+        </jsp:useBean>
+        
+      
+>>>>>>> origin/NEW
     <style>
 body {
   background-color: linen;
@@ -50,7 +69,11 @@ h1 {
 </style>
   <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
 
+<<<<<<< HEAD
     
+=======
+    <% User user = (User) session.getAttribute("user"); %>
+>>>>>>> origin/NEW
 
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +104,11 @@ h1 {
                 </li><li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span>
                         Contact Us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li><li class="nav-item dropdown"><a class="nav-link link text-white display-4" ><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span>
                         Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li></ul>
+<<<<<<< HEAD
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="index.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
+=======
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
+>>>>>>> origin/NEW
                     
                     Logout</a></div>
         </div>
@@ -97,9 +124,16 @@ h1 {
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-10 align-center">
+<<<<<<< HEAD
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
                     Welcome {User Name}</h1>
                 
+=======
+                <% if (user != null) { %>
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
+                    Welcome <%= user.getFirstName()%></h1>
+                <% } %>
+>>>>>>> origin/NEW
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Pruchase Movies below</p>
                 
             </div>
@@ -135,6 +169,7 @@ h1 {
             
             
             
+<<<<<<< HEAD
             <!--Card-1-->
             <div class="card col-12 pb-5">
                 <div class="card-wrapper media-container-row media-container-row">
@@ -317,6 +352,9 @@ h1 {
     <li class="page-item"><a class="page-link" href="#">Next</a></li>
   </ul>
 </nav>
+=======
+        <jsp:include page="displayCatalogue.jsp" flush="true" />
+>>>>>>> origin/NEW
     
 </section>
 
