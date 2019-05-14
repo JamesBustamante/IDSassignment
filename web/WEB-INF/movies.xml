@@ -89,4 +89,232 @@
         <ratingRT>77</ratingRT>
         <picture>pictures/Batman_Begins.jpg</picture>
     </movie>
+    <movie>
+        <movieID>7</movieID>
+        <movieTitle>Blade</movieTitle>
+        <genre>Horror</genre>
+        <moviePrice>12.99</moviePrice>
+        <movieLength>123</movieLength>
+        <movieQuantity>1</movieQuantity>
+        <movieReleaseDate>2002</movieReleaseDate>
+        <movieDescription>A half-mortal, half-immortal is out to avenge his mother's death and rid the world of vampires. 
+            The modern-day technologically advanced vampires he is going after are in search of his special blood type needed to 
+            summon an evil god who plays a key role in their plan to execute the human race.</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/blade.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>8</movieID>
+        <movieTitle>Big Fat Liar</movieTitle>
+        <genre>Comedy</genre>
+        <moviePrice>2.99</moviePrice>
+        <movieLength>99</movieLength>
+        <movieQuantity>11</movieQuantity>
+        <movieReleaseDate>2002</movieReleaseDate>
+        <movieDescription>Who's afraid of the big bad Wolf? Not Jason Shepherd (Frankie Muniz), who has to prove 
+            that sleazy Hollywood producer Marty Wolf (Paul Giamatti) stole his class paper and turned it into a blockbuster hit movie, 
+            "Big Fat Liar."</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/bigfatliar.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>9</movieID>
+        <movieTitle>Diary of the wimpy kid</movieTitle>
+        <genre>Family</genre>
+        <moviePrice>11.99</moviePrice>
+        <movieLength>87</movieLength>
+        <movieQuantity>3</movieQuantity>
+        <movieReleaseDate>2010</movieReleaseDate>
+        <movieDescription>Diary of a Wimpy Kid is a series of fiction books written by the American author and cartoonist Jeff Kinney. 
+            All the main books are the journals of the main character, Greg Heffley. Befitting a teen's diary, the books are filled with 
+            hand-written notes and simple drawings of Greg's daily adventures</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/wimpykid.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>10</movieID>
+        <movieTitle>Evan Almighty</movieTitle>
+        <genre>Family</genre>
+        <moviePrice>10.93</moviePrice>
+        <movieLength>97</movieLength>
+        <movieQuantity>44</movieQuantity>
+        <movieReleaseDate>2007</movieReleaseDate>
+        <movieDescription>Newscaster Evan Baxter (Steve Carell) leaves Buffalo behind when he wins a seat in Congress. Moving his wife 
+            (Lauren Graham) and family to northern Virginia, he seems to have it made, then God (Morgan Freeman) throws a crisis of 
+            biblical proportions at his feet: </movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/evan.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>11</movieID>
+        <movieTitle>Ferris Bueller's Day off</movieTitle>
+        <genre>Comedy</genre>
+        <moviePrice>4.50</moviePrice>
+        <movieLength>110</movieLength>
+        <movieQuantity>1</movieQuantity>
+        <movieReleaseDate>1986</movieReleaseDate>
+        <movieDescription>Ferris Bueller (Matthew Broderick) has an uncanny skill at cutting classes and getting away with it. Intending to 
+            make one last duck-out before graduation, Ferris calls in sick, "borrows" a Ferrari, and embarks 
+            on a one-day journey through the streets of Chicago.</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/ferris.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>12</movieID>
+        <movieTitle>Garfield</movieTitle>
+        <genre>Family</genre>
+        <moviePrice>1.00</moviePrice>
+        <movieLength>87</movieLength>
+        <movieQuantity>33</movieQuantity>
+        <movieReleaseDate>2004</movieReleaseDate>
+        <movieDescription>Based on the popular comic strip, this live-action comedy follows the exploits of Garfield (Bill Murray), the large, 
+            lazy and wisecracking cat owned by hapless Jon Arbuckle (Breckin Meyer). Jon's other housemate, Odie, 
+            is a dim but sweet dog who frequently annoys Garfield. </movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/garfield.png</picture>
+    </movie>
+    <movie>
+        <movieID>13</movieID>
+        <movieTitle>Gone girl</movieTitle>
+        <genre>Thriller</genre>
+        <moviePrice>22.99</moviePrice>
+        <movieLength>149</movieLength>
+        <movieQuantity>2</movieQuantity>
+        <movieReleaseDate>2014</movieReleaseDate>
+        <movieDescription>In Carthage, Mo., former New York-based writer Nick Dunne (Ben Affleck) and his glamorous wife Amy (Rosamund Pike)
+            present a portrait of a blissful marriage to the public. However, when Amy goes missing on the couple's fifth wedding anniversary, Nick
+            becomes the prime suspect in her disappearance. </movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/gone-girl.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>14</movieID>
+        <movieTitle>Home alone</movieTitle>
+        <genre>Family</genre>
+        <moviePrice>10.34</moviePrice>
+        <movieLength>99</movieLength>
+        <movieQuantity>2</movieQuantity>
+        <movieReleaseDate>1990</movieReleaseDate>
+        <movieDescription>When bratty 8-year-old Kevin McCallister (Macaulay Culkin) acts out the night before a family trip to Paris, his mother (Catherine O'Hara) 
+            makes him sleep in the attic. After the McCallisters mistakenly leave for the airport without Kevin, he awakens to an empty house and assumes 
+            his wish to have no family has come true.</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/homealone.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>15</movieID>
+        <movieTitle>John Wick</movieTitle>
+        <genre>Action</genre>
+        <moviePrice>26.99</moviePrice>
+        <movieLength>138</movieLength>
+        <movieQuantity>12</movieQuantity>
+        <movieReleaseDate>2015</movieReleaseDate>
+        <movieDescription>Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep
+            mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, 
+            John unleashes the remorseless killing machine within and seeks vengeance. </movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/johnwick.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>16</movieID>
+        <movieTitle>Mad max</movieTitle>
+        <genre>Fantasy</genre>
+        <moviePrice>23.99</moviePrice>
+        <movieLength>154</movieLength>
+        <movieQuantity>1</movieQuantity>
+        <movieReleaseDate>2014</movieReleaseDate>
+        <movieDescription>Years after the collapse of civilization, the tyrannical Immortan Joe enslaves apocalypse survivors inside 
+            the desert fortress the Citadel. When the warrior Imperator Furiosa (Charlize Theron) leads the despot's five wives in a daring escape, 
+            she forges an alliance with Max Rockatansky (Tom Hardy), a loner and former captive. Fortified in the massive, armored truck the War Rig, 
+            they try to outrun the ruthless warlord and his henchmen in a deadly high-speed chase through the Wasteland. </movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/madmax.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>17</movieID>
+        <movieTitle>Mr Bean's holiday</movieTitle>
+        <genre>Comedy</genre>
+        <moviePrice>13.99</moviePrice>
+        <movieLength>102</movieLength>
+        <movieQuantity>33</movieQuantity>
+        <movieReleaseDate>2007</movieReleaseDate>
+        <movieDescription>Mr Bean is going on holiday to the south of France, looking for a quiet and sunny trip in the Riviera. However,
+            his trip doesn't go as smoothly as he expected when he has to face a series of misunderstandings and totally unfortunate coincidences. </movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/Mr.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>18</movieID>
+        <movieTitle>Hitch</movieTitle>
+        <genre>Comedy</genre>
+        <moviePrice>22.11</moviePrice>
+        <movieLength>111</movieLength>
+        <movieQuantity>4</movieQuantity>
+        <movieReleaseDate>2005</movieReleaseDate>
+        <movieDescription>Dating coach Alex "Hitch" Hitchens (Will Smith) mentors a bumbling client, Albert (Kevin James), who hopes to win the 
+            heart of the glamorous Allegra Cole (Amber Valletta). While Albert makes progress, Hitchens faces his own romantic 
+            setbacks when proven techniques fail to work on Sara Melas (Eva Mendes), a tabloid reporter digging for dirt on Allegra Cole's love life</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/hitch.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>19</movieID>
+        <movieTitle>I Am Legend</movieTitle>
+        <genre>Fantasy</genre>
+        <moviePrice>17.33</moviePrice>
+        <movieLength>156</movieLength>
+        <movieQuantity>33</movieQuantity>
+        <movieReleaseDate>2007</movieReleaseDate>
+        <movieDescription>Robert Neville (Will Smith), a brilliant scientist, is a survivor of a man-made plague that transforms 
+            humans into bloodthirsty mutants. He wanders alone through New York City, calling out for other possible survivors, 
+            and works on finding a cure for the plague using his own immune blood. Neville knows he is badly outnumbered and 
+            the odds are against him, and all the while, the infected wait for him to make a mistake that will deliver Neville into their hands.</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/iamlegend.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>20</movieID>
+        <movieTitle>Inception</movieTitle>
+        <genre>Action</genre>
+        <moviePrice>15.99</moviePrice>
+        <movieLength>143</movieLength>
+        <movieQuantity>2</movieQuantity>
+        <movieReleaseDate>2010</movieReleaseDate>
+        <movieDescription>Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their 
+            secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. 
+            Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone's mind. If he succeeds, it will be the perfect crime, 
+            but a dangerous enemy anticipates Cobb's every move.</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/inception.jpg</picture>
+    </movie>
+    <movie>
+        <movieID>21</movieID>
+        <movieTitle>Jingle all the way</movieTitle>
+        <genre>Family</genre>
+        <moviePrice>12.99</moviePrice>
+        <movieLength>89</movieLength>
+        <movieQuantity>23</movieQuantity>
+        <movieReleaseDate>1996</movieReleaseDate>
+        <movieDescription>Workaholic Howard Langston (Arnold Schwarzenegger) wants to make things up to his son, Jamie 
+            (Jake Lloyd), and wife, Liz (Rita Wilson). He promises to get Jamie the hottest toy of the season, Turbo-Man -- even 
+            though it's Christmas Eve and the toy is practically sold out. As Langston hunts down the elusive gift, he runs into mailman 
+            Myron (Sinbad), another father on the same quest. With the clock winding down, Langston's moral code is tested as he starts to learn the real meaning of Christmas.</movieDescription>
+        <ratingIMDB>9</ratingIMDB>
+        <ratingRT>77</ratingRT>
+        <picture>pictures/jingle.jpg</picture>
+    </movie>
 </movies>
