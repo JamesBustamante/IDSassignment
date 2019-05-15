@@ -40,4 +40,26 @@ public class Movies implements Serializable {
      public void addMovie(Movie movie) {
         movies.add(movie);
     }
+     
+     public ArrayList<Movie> getMovieMatches(String userInput){
+        ArrayList<Movie> matches = new ArrayList<>();
+        ArrayList<Movie> returnMatches = new ArrayList<>();
+        for(Movie movie:movies)
+            if(movie.getGenre().equalsIgnoreCase(userInput) || movie.getMovieTitle().equalsIgnoreCase(userInput))
+                matches.add(movie);
+        for (Movie movie: matches) {
+            if (!returnMatches.contains(movie)) {
+                returnMatches.add(movie);
+            }
+        }
+        return returnMatches;
+    }
+     
+     public ArrayList<Movie> getGenreMatches(String genre){
+        ArrayList<Movie> matches = new ArrayList<>();
+        for(Movie movie:movies)
+            if(movie.getGenre().equalsIgnoreCase(genre))
+                matches.add(movie);
+        return matches;
+    }
 }
