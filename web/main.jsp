@@ -39,6 +39,10 @@
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
         
+        <jsp:useBean id="search" 
+                     class="uts.ids.Search" scope="application">
+                     </jsp:useBean>
+        
       
     <style>
 body {
@@ -131,14 +135,12 @@ h1 {
                 <h2 class="align-left mbr-fonts-style m-0 display-1">Movie Catalogue</h2>
                 
                 
-                
-                <h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5">
-                    From Most Popular</h3>
-                
                                 <!-- Search form -->
-<form class="form-inline">
+<form class="form-inline" action="searchAction.jsp" method="get">
   <i class="fas fa-search" aria-hidden="true"></i>
-  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+  <input class="form-control form-control-sm ml-3 w-75" type="text" name="search" placeholder="Search" aria-label="Search">
+  <input class="btn btn-primary" type="submit" value="Search"> 
+  <input type="hidden" value="submitted" name="submitted">
 </form>
             </div>
             

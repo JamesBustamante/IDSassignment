@@ -16,10 +16,26 @@
 <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
     <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
 </jsp:useBean>
+
+<jsp:useBean id="search" 
+                     class="uts.ids.Search" scope="application">
+                     </jsp:useBean>
         <% 
             Movies movies = catalogueApp.getMovies();
             ArrayList<Movie> matches = movies.getMovies();
+            ArrayList<Movie> titleMatches = movies.getMovies();
+            ArrayList<Movie> yearMatches = movies.getMovies();
+            ArrayList<Movie> genreMatches = movies.getMovies();
             //matches.get(1).getMovieDescription();
+            
+            boolean searchHasInput = false;
+            if (!search.getUserInput().equals("")) {
+                searchHasInput = true;
+                matches = movies.getMovieMatches(search.getUserInput());
+                //matches = movies.getGenreMatches(search.getUserInput());
+            }
+            
+            
         %>
         
         <c:set var = "xmltext"> 
