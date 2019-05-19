@@ -36,7 +36,7 @@
 		<tr >
 			<td><img src="{picture}" align="left" height="600" width="450"/></td>
 			<td VALIGN="TOP" align="center"> 
-                                                            <table  cellpadding = "25">
+        <table  cellpadding = "25">
 	<tbody>
 		<tr>
 			<td><b>Movie Genre: </b></td>
@@ -71,7 +71,7 @@
 			<td style="padding-left: 50px; padding-bottom: 20px;"><xsl:choose>
                  <xsl:when test="movieQuantity != '0'">
                 <form action="orderPage.jsp" method="get">   <!--Creates the button to reserve movies.-->
-                        <input type="hidden" name="id" value="{title}"/>
+                        <input type="hidden" name="title" value="{title}"/>
                         <input type="submit" value="Add Movie To Order" name="select" class="btn btn-info btn-sm"/>
                 </form>
                  </xsl:when>
