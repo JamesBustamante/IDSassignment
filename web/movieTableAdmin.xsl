@@ -36,7 +36,7 @@
                     <th>Genre</th>
                     <th>No. Copies</th>
                     <th>Price</th>
-                    <th>View</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -65,7 +65,7 @@
             <td>
                 <form action="editMoviePage.jsp" method="get">   <!--Creates the button to view movie in more specific detail-->
                         <input type="hidden" name="id" value="{movieID}"/>
-                        <input type="submit" value="Select" name="select"/>
+                        <input type="submit" value="Select" name="select" class="btn btn-info btn-sm"/>
                 </form>
                 
             </td>

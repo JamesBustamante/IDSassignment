@@ -28,15 +28,15 @@
     </xsl:template>
     
     <xsl:template match="movies">
-        <table align="center" width="200%">
-            <thead>
+        <table align="center" width="200%" >
+            <thead >
                 <tr>
                     <th></th>
                     <th>Title</th>
                     <th>Genre</th>
                     <th>No. Copies</th>
                     <th>Price</th>
-                    <th>View</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -63,9 +63,9 @@
                 $<xsl:value-of select="moviePrice"/>
             </td>
             <td>
-                <form action="descriptionPage.jsp" method="get">   <!--Creates the button to view movie in more specific detail-->
+                <form action="descriptionPage.jsp" method="get" >   <!--Creates the button to view movie in more specific detail-->
                         <input type="hidden" name="id" value="{movieTitle}"/>
-                        <input type="submit" value="Select" name="select"/>
+                        <input type="submit" value="Select" name="select" class="btn btn-info btn-sm"/>
                 </form>
                 
             </td>

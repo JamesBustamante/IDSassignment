@@ -72,7 +72,7 @@
                  <xsl:when test="movieQuantity != '0'">
                 <form action="orderPage.jsp" method="get">   <!--Creates the button to reserve movies.-->
                         <input type="hidden" name="id" value="{title}"/>
-                        <input type="submit" value="Add Movie To Order" name="select"/>
+                        <input type="submit" value="Add Movie To Order" name="select" class="btn btn-info btn-sm"/>
                 </form>
                  </xsl:when>
                      <xsl:otherwise>Unavailable</xsl:otherwise>

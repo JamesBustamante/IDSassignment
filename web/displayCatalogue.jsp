@@ -57,3 +57,17 @@
 <c:import url = "movieTable.xsl" var = "xslt"/>
 <x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>
 
+<%! String ErrorInput;%>
+<%
+    if (matches.size() == 0) {
+        ErrorInput = search.getUserInput() + " ";
+%>
+<body>
+<p style="color:brown;font-size:30px;"><br><br>Error! Movie Not Found</p>
+<p style="color:brown;font-size:22px;"><br><br></p>
+<p style="color:brown;font-size:30px;"><br><br>&nbsp;Parameters given: <%= ErrorInput%></p>
+
+</body>
+<% ErrorInput = ""; %>
+<% search.setUserInput(""); %>
+<% } %>

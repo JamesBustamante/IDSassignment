@@ -33,7 +33,7 @@
   <%@page import="uts.ids.*" contentType="text/html" %>
   
 </head>
-<body>
+<body scroll="no">
     <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
@@ -54,7 +54,14 @@ body {
 h1 {
   color: maroon;
   margin-left: 40px;
-} 
+}
+
+.headertext{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 0px;
+    margin-left: 20px;
+}
 </style>
   <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
 
@@ -116,25 +123,24 @@ h1 {
     </div>
 
 </section>
-<div >
-    <form action="manageCatalog.jsp" align="center"  type="button" class="btn btn-primary">
-    <input type="submit" value="Manage Catalogue" />
+<div align="center" class="headertext">
+    <form action="manageCatalog.jsp" align="center"  type="button" class="headertext" >
+    <input type="submit" value="Manage Catalogue"class="btn btn-primary" />
 </form>
-    <form action="addMoviePage.jsp" align="center"  type="button" class="btn btn-primary">
-    <input type="submit" value="Add Movie To Catalogue" />
+    <form action="addMoviePage.jsp" align="center"  type="button" class="headertext">
+    <input type="submit" value="Add Movie To Catalogue" class="btn btn-primary"/>
 </form>
-<button type="button" class="btn btn-primary">Add New Movie to Catalog</button>
 </div>
 
 <style type="text/css">
   #footer {
     position : absolute;
     bottom : 0;
-    height : 1px;
+    height : 0px;
     width: 100%;
   }
 </style>
-<section once="footers" class="cid-rnOnTVUo9Q" id="footer">
+<section once="footers" class="cid-rnOnTVUo9Q" id="footer" scroll="no">
     <div class="container">
         <div class="media-container-row align-center mbr-white">
             <div>

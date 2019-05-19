@@ -134,12 +134,7 @@ h1 {
             <div class="title col-12">
                 <h2 class="align-left mbr-fonts-style m-0 display-1">Movie Catalogue</h2>
                 
-                <%
-                        String uri = request.getRequestURI();
-
-                        String pageName = uri.substring(uri.lastIndexOf("/")+1);
-                %>
-                <%= pageName %>
+  
                                 <!-- Search form -->
 <form class="form-inline" action="searchAction.jsp" method="get">
   <i class="fas fa-search" aria-hidden="true"></i>

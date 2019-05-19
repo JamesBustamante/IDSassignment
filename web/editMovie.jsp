@@ -84,14 +84,14 @@
 		</tr>
 	</tbody>
 </table>
-                <input type="submit" value="Save Changes"/>
+                <input type="submit" value="Save Changes" class="btn btn-info btn-sm"/>
                     <input type="hidden" name="updated" value="updated"/>
                     <input type="hidden" name="id" value="<%= myMovieMatch.getMovieID()%>"/>
 </form>
                 
                 <form action="removeMovie.jsp">
                     <input type="hidden" name="id" value="<%= myMovieMatch.getMovieID()%>"/>
-                <input type="submit" name="cancel" value="X Remove Movie X"/>
+                <input type="submit" name="cancel" value="X Remove Movie X" class="btn btn-secondary btn-sm"/>
             </form>
                 
     </body>
