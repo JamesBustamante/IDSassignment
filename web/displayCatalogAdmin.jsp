@@ -17,10 +17,25 @@
 <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
     <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
 </jsp:useBean>
+
+<jsp:useBean id="search" 
+                     class="uts.ids.Search" scope="application">
+                     </jsp:useBean>
         <% 
             Movies movies = catalogueApp.getMovies();
             ArrayList<Movie> matches = movies.getMovies();
+            ArrayList<Movie> titleMatches = movies.getMovies();
+            ArrayList<Movie> yearMatches = movies.getMovies();
+            ArrayList<Movie> genreMatches = movies.getMovies();
             //matches.get(1).getMovieDescription();
+            
+            boolean searchHasInput = false;
+            if (!search.getUserInput().equals("")) {
+                searchHasInput = true;
+                matches = movies.getMovieMatches(search.getUserInput());
+                //matches = movies.getGenreMatches(search.getUserInput());
+            }
+          
         %>
         
         <c:set var = "xmltext"> 
@@ -42,3 +57,17 @@
 </c:set>
 <c:import url = "movieTableAdmin.xsl" var = "xslt"/>
 <x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>
+<%! String ErrorInput;%>
+<%
+    if (matches.size() == 0) {
+        ErrorInput = search.getUserInput() + " ";
+%>
+<body>
+<p style="color:brown;font-size:30px;"><br><br>Error! Movie Not Found</p>
+<p style="color:brown;font-size:22px;"><br><br></p>
+<p style="color:brown;font-size:30px;"><br><br>&nbsp;Parameters given: <%= ErrorInput%></p>
+
+</body>
+<% ErrorInput = ""; %>
+<% search.setUserInput(""); %>
+<% } %>

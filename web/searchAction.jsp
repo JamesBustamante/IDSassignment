@@ -19,6 +19,7 @@
         <% 
             search.emptySearch();
             search.setUserInput("");
+            String pageName = request.getParameter("page");
             String userInput = request.getParameter("search");
             boolean emptyUserInput = false;
             if (userInput.trim().isEmpty()) {
@@ -28,7 +29,7 @@
             if (userInput != null){
                 search.setUserInput(userInput);
             }
-            response.sendRedirect("main.jsp");
+            response.sendRedirect(pageName);
         
         %>
     </body>

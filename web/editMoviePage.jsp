@@ -33,7 +33,7 @@
   <%@page import="uts.ids.*" contentType="text/html" %>
   
 </head>
-<body>
+<body >
     <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
@@ -128,18 +128,8 @@ h1 {
         <div class="row">
             <!--Titles-->
             <div class="title col-12">
-                <h2 class="align-left mbr-fonts-style m-0 display-1">Movie Catalogue</h2>
+                <h2 class="align-left mbr-fonts-style m-0 display-1">Edit Movie</h2>
                 
-                
-                
-                <h3 class="mbr-section-subtitle mbr-light mbr-fonts-style display-5">
-                    From Most Popular</h3>
-                
-                                <!-- Search form -->
-<form class="form-inline">
-  <i class="fas fa-search" aria-hidden="true"></i>
-  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-</form>
             </div>
             
             
