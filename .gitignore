@@ -25,3 +25,6 @@ hs_err_pid*
 /build/
 /WebApplication1/nbproject/private/
 /ISD_Assignment_NB_Version/nbproject/private/
+nbproject/private/private\.xml
+
+nbproject/private/private\.properties
