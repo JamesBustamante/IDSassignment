@@ -27,7 +27,7 @@
                     </div>
                     
                     <div class="offset-1">
-                        Enter your details below to register for the Movie Store<br>
+                        If you would like to read or change your registration details you can do it here! Just change the details below<br>
                         <br>
                     </div>
 
