@@ -199,7 +199,7 @@
                         </div>
                                 
                         <div class="col-2">
-                            <form action="main.jsp">
+                            <form action="userLogs.jsp">
                                 <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
                                 <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
                             </form>
