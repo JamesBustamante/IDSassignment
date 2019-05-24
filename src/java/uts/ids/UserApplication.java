@@ -22,21 +22,37 @@ public class UserApplication {
     private String filePath;
     private Users users;
 
+    /**
+     *
+     * @param filePath
+     * @param users
+     */
     public UserApplication(String filePath, Users users) {
         super();
         this.filePath = filePath;
         this.users = users;
     }
     
-        public UserApplication() {
+    /**
+     *
+     */
+    public UserApplication() {
     }
 
+    /**
+     *
+     * @return
+     */
     public String getFilePath() {
         return filePath;
     }
 
-    
-      public void setFilePath(String filePath) throws Exception {
+    /**
+     *
+     * @param filePath
+     * @throws Exception
+     */
+    public void setFilePath(String filePath) throws Exception {
 
         // Create the unmarshaller
         JAXBContext jc = JAXBContext.newInstance(Users.class);

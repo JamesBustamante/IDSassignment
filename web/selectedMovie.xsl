@@ -19,30 +19,32 @@
                 <title>selectedMovie.xsl</title>
             </head>
             <body>
-                <div class="page-header"><h1>Order Checkout</h1></div>
+                <div class="page-header">
+                    <h1>Order Checkout</h1>
+                </div>
                 <xsl:apply-templates select="movies"/>  
             </body>
         </html>
     </xsl:template>
     
-     <xsl:template match="movies">
-         <!--<xsl:apply-templates select="movie/>-->
+    <xsl:template match="movies">
+        <!--<xsl:apply-templates select="movie/>-->
         <div class="container border">
-        <table cellpadding="10" style="width: 100%">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Release Date</th>
-                    <th>Available Copies</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <xsl:apply-templates select="movie"/>
-            </tbody>
-        </table>
+            <table cellpadding="10" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Release Date</th>
+                        <th>Available Copies</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:apply-templates select="movie"/>
+                </tbody>
+            </table>
         </div>
     </xsl:template>
     
