@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+
+ 
+    <!-- Insert your type declarations here -->
+    <xs:simpleType name="title">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(.*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+ 
+    
+    <xs:simpleType name="picture">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(.*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+  
+    <!-- Insert your element declarations here -->
+    
+    <xs:element name="movies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="movieID" type="xs:postiveInteger"/>
+                            <xs:element name="movieTitle" type="title"/>
+                            <xs:element name="genre" type="genres"/>
+                            <xs:element name="moviePrice" type="xs:decimal"/>
+                            <xs:element name="movieLength" type="xs:Integer"/>
+                            <xs:element name="movieQuantity" type="xs:postiveInteger"/>
+                            <xs:element name="movieReleaseDate" type="xs:date"/>
+                            <xs:element name="movieDescription" type="xs:string"/>
+                            <xs:element name="ratingIMDB" type="xs:integer"/>
+                             <xs:element name="ratingRT" type="xs:integer"/>
+                             <xs:element name="picture" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+            
+
+</xs:schema>

@@ -11,15 +11,16 @@ package uts.ids;
  */
 import javax.xml.bind.*;
 import java.io.*;
+import java.util.Optional;
 
 /**
  *
- * @author james
- * XML Transformer for the marshalling and unmarshalling of XML
+ * @author james XML Transformer for the marshalling and unmarshalling of XML
  */
 public class MovieApplication {
-           private String filePath;
-        private Movies movies;
+
+    private String filePath;
+    private Movies movies;
 
     /**
      *
@@ -36,8 +37,8 @@ public class MovieApplication {
      *
      */
     public MovieApplication() {
-    }    
-        
+    }
+
     /**
      *
      * @return
@@ -57,10 +58,10 @@ public class MovieApplication {
         Unmarshaller u = jc.createUnmarshaller();
         this.filePath = filePath;
         FileInputStream fin = new FileInputStream(filePath);
-        movies = (Movies)u.unmarshal(fin);
+        movies = (Movies) u.unmarshal(fin);
         fin.close(); //Finds the file path from JSP page
     }
-    
+
     /**
      *
      * @param movies
@@ -77,7 +78,7 @@ public class MovieApplication {
         m.marshal(movies, fout); //Update the data in the XML
         fout.close();
     }
-     
+
     /**
      *
      * @throws JAXBException
@@ -107,6 +108,12 @@ public class MovieApplication {
     public void setMovies(Movies movies) {
         this.movies = movies;
     }
-        
-        
+
+    private static Movie getMovie(int id) {
+        MovieDAO MovieDAO = new MovieDAO();
+        Optional<Movie> movie = MovieDAO.get(id);
+        return movie.orElseGet(
+                () -> new Movie("non-existing Movie", "no-ID"));
+    }
+
 }

@@ -76,7 +76,7 @@
                             <img src="assets/images/mbr-122x80.jpg" title="" style="height: 3.8rem;">
 
                         </span>
-                        <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4">Online Movie Store</a></span>
+                        <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="mainstaff.jsp">Online Movie Store</a></span>
                     </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -128,8 +128,11 @@
                 <div class="row">
                     <!--Titles-->
                     <div class="title col-12">
+                        <form action="manageCatalog.jsp" align="center"  type="button" class="headertext" >
+    <input type="submit" value="Return to catalogue"class="btn btn-primary" />
+</form>
                         <h2 class="align-left mbr-fonts-style m-0 display-1">Edit Movie</h2>
-
+                        
                     </div>
 
 

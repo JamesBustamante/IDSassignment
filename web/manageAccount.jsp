@@ -38,6 +38,7 @@
         </jsp:useBean>
 
         <%  User user = (User) session.getAttribute("user");
+                
             String id = request.getParameter("id");
             Users users = UserApplication.getUsers();
 
