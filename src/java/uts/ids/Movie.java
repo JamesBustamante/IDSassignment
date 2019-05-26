@@ -73,6 +73,10 @@ public class Movie implements Serializable {
         this.ratingRT = ratingRT;
         this.picture = picture;
     }
+
+    Movie(String nonexisting_Movie, String noID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      
     /**
      *

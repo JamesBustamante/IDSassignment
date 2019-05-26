@@ -12,6 +12,7 @@ package uts.ids;
 import javax.xml.bind.*;
 import java.io.*;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 /**
  *
@@ -112,8 +113,12 @@ public class MovieApplication {
     private static Movie getMovie(int id) {
         MovieDAO MovieDAO = new MovieDAO();
         Optional<Movie> movie = MovieDAO.get(id);
-        return movie.orElseGet(
-                () -> new Movie("non-existing Movie", "no-ID"));
+        return movie.orElseGet(new Supplier<Movie>() {
+            @Override
+            public Movie get() {
+                return new Movie("non-existing Movie", "no-ID");
+            }
+        });
     }
 
 }
