@@ -4,6 +4,7 @@
     Author     : Ciaran
 --%>
 
+<%@page import="java.awt.Checkbox"%>
 <%@page import="java.util.regex.Pattern"%>
 <%@page import="uts.ids.*"%>
 <%@page import="java.util.Random"%>
@@ -23,6 +24,7 @@
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
         
         <%
+        // Variables to get all the input fields from registration
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String gender = request.getParameter("gender");
@@ -34,6 +36,7 @@
         String addressPostcode = request.getParameter("addressPostcode");
         String addressState = request.getParameter("addressState");
         String tos = request.getParameter("tos");
+        // Random Number to generate UserID
         int key = (new Random()).nextInt(999999);
         String userID = "" + key;
         // Email Validation - Any number of character can be before and after the @ symbol
@@ -67,7 +70,8 @@
         else { %>
            <p> Registration unsuccessful. Click <a href="register.jsp">here</a> to try again. </p>
            <p> Please make sure you haven't left any empty fields, have a legitimate email address and your password must have: </p>
-           <p> One lowercase letter, one upper case letter and one number </p>
+           <p> At least 8 characters, must contain 1 uppercase letter, 1 lowercase letter and 1 number </p>
+           
        <% } %>
         
                    

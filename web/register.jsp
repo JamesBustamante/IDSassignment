@@ -29,7 +29,7 @@
                     <div class="offset-1">
                         <p> Enter your details below to register for the Movie Store</p>
                         <p> Please make sure you haven't left any empty fields, have a legitimate email address and your password must have: </p>
-                        <p>  At least 8 characters, must contain 1 uppercase letter, 1 lowercase letter and 1 number</p>
+                        <p> At least 8 characters, must contain 1 uppercase letter, 1 lowercase letter and 1 number</p>
                         <br>
                         
                     </div>

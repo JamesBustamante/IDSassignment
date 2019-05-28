@@ -22,25 +22,30 @@
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     </head>
+        // Initialising Java Bean
         <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
         
         <%
-            String email = request.getParameter("email");  //gets email and password from login.jsp once entered by user
+            //Gets email and password from login.jsp once entered by user
+            String email = request.getParameter("email");  
             String password = request.getParameter("password"); 
-             Users users = UserApplication.getUsers();
+            Users users = UserApplication.getUsers();
             User loginUser = users.login(email, password);
             if (loginUser != null) {
                 session.setAttribute("user", loginUser);
+                //If user is not staff redirect him to catalogue
                 if (loginUser.getIsStaff().equalsIgnoreCase("false")) {
                     response.sendRedirect("main.jsp");
         %>
          
          <%}  else {%>
+         // If user is admin. Make him click a link to get to Admin Portal
          <p>Login successful. Click <a href="mainstaff.jsp">here</a> to enter staff page.</p> <% } %>
          <% } else {
+                    // Case for inccorect login
                     session.setAttribute("Error", "NULL"); %>
            <p>Login incorrect. Click <a href="index.jsp">here</a> to try again.</p>         
             <% }%>
