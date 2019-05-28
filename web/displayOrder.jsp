@@ -15,18 +15,25 @@
     <jsp:setProperty name="movieApp" property="filePath" value="<%=filePath%>"/>
 </jsp:useBean>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="multiMovieOrder"
+             class="uts.ids.MultiMovieOrder" scope="session">
+</jsp:useBean>
+
+<%--<%@page contentType="text/html" pageEncoding="UTF-8"%>--%>
 
 <%
-    String title = "Anchorman";
+    String title = request.getParameter("title");
 
     Movies movies = movieApp.getMovies();
     ArrayList<Movie> all = movies.getMovies();
-    ArrayList<Movie> match = new ArrayList<Movie>();
-    for(Movie movie : all){
-        if(movie.getMovieTitle().equalsIgnoreCase(title)){
-            match.add(movie);
-            break;
+    ArrayList<Movie> match = new ArrayList();
+    
+    multiMovieOrder.movies.add(title);
+    for(String movie : multiMovieOrder.movies){
+        for(Movie m : all){
+            if(m.getMovieTitle().equalsIgnoreCase(movie)){
+                match.add(m);
+            }          
         }
     }
 

@@ -28,9 +28,9 @@
     Movies movies = catalogueApp.getMovies();
     ArrayList<Movie> allMovies = movies.getMovies();
     Movie myMovieMatch = movies.getMoviebyID(id);
-    movies.removeMovie(myMovieMatch);
-    catalogueApp.updateXML(movies, filePath);
-    response.sendRedirect("manageCatalog.jsp");
+movies.removeMovie(myMovieMatch);
+catalogueApp.updateXML(movies, filePath);
+response.sendRedirect("manageCatalog.jsp");
 
 %>
     </body>

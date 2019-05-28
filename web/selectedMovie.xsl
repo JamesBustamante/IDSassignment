@@ -30,21 +30,22 @@
     <xsl:template match="movies">
         <!--<xsl:apply-templates select="movie/>-->
         <div class="container border">
-            <table cellpadding="10" style="width: 100%">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Release Date</th>
-                        <th>Available Copies</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <xsl:apply-templates select="movie"/>
-                </tbody>
-            </table>
+        <table cellpadding="10" style="width: 100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Release Date</th>
+                    <th>Available</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <xsl:apply-templates select="movie"/>
+            </tbody>
+        </table>
         </div>
     </xsl:template>
     
@@ -54,7 +55,7 @@
                 <img src="{picture}" align="left" height="100" width="75"/>
             </td>   
             <td>
-                <xsl:value-of select="/movies/movie/movieTitle"/>
+                <xsl:value-of select="movieTitle"/>
             </td>         
             <td>
                 <xsl:value-of select="genre"/>
@@ -66,8 +67,11 @@
                 <xsl:value-of select="movieQuantity"/>
             </td>
             <td>
+                $<xsl:value-of select="moviePrice"/>
+            </td>
+            <td>
                 <form action="removeMovieFromOrderAction.jsp" method="get">   <!-- Creates the button to remove the selected movie.-->
-                    <input type="hidden" name="id" value="{title}"/>
+                    <input type="hidden" name="title" value="{movieTitle}"/>
                     <input type="submit" value="Remove" name="removeMovie" class="btn-primary"/>
                 </form>
             </td>

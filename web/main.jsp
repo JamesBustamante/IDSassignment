@@ -8,21 +8,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html>
+<html  >
 <head>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/mbr-122x80.jpg" type="image/x-icon">
-
   <!--<link rel="shortcut icon" href="assets/images/mbr-122x80.jpg" type="image/x-icon">-->
   <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
-
   <meta name="description" content="Web Page Creator Description">
   
-  <title>Main</title>
+  <title>Page 1</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -33,11 +30,6 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
-  
-  
-</head>
-<body>
-
   <%@page import="uts.ids.*" contentType="text/html" %>
   
 </head>
@@ -52,7 +44,6 @@
                      </jsp:useBean>
         
       
-
     <style>
 body {
   background-color: linen;
@@ -70,8 +61,8 @@ h1 {
 } 
 </style>
   <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
-    <% User user = (User) session.getAttribute("user"); %>
 
+    <% User user = (User) session.getAttribute("user"); %>
 
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,7 +114,7 @@ h1 {
                     Welcome <%= user.getFirstName()%></h1>
                 <% } %>
 
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Purchase Movies below</p>
+                <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Pruchase Movies below</p>
                 
             </div>
         </div>

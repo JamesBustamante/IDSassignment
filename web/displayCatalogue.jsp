@@ -19,6 +19,12 @@
 
 <jsp:useBean id="search" 
                      class="uts.ids.Search" scope="application">
+                     </jsp:useBean>
+    
+<jsp:useBean id="multiMovieOrder" 
+             class="uts.ids.MultiMovieOrder" scope="session">
+</jsp:useBean>
+
                      </jsp:useBean>  <!-- calculate searches and manages the input textbox -->
         <% 
             Movies movies = catalogueApp.getMovies();
@@ -31,6 +37,19 @@
                 matches = movies.getMovieMatches(search.getUserInput());
             }
             
+            //THIS WILL BE USED TO REMOVE MOVIES FROM THE LIST IF IN AN ORDER.
+            
+//            ArrayList<Movie> moviesSelected = new ArrayList<Movie>();
+//            for (String movie : multiMovieOrder.movies){
+//                for(Movie m : matches){
+//                    if(m.getMovieTitle().equals(movie)){
+//                        moviesSelected.add(m);
+//                    }
+//                }
+//            }
+//            
+//            //Removes movies from list if it already exits in an order.
+//            matches.removeAll(moviesSelected);
             
         %>
         <%--  XML transformation of data that is displayed through XSLT --%>
