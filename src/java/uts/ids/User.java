@@ -51,9 +51,29 @@ public class User implements Serializable {
     @XmlElement(name = "accountCredit")
     private String accountCredit;
     
-     public User() {
+    /**
+     *
+     */
+    public User() {
     }
 
+    /**
+     *
+     * @param onlineMovieStoreID
+     * @param isStaff
+     * @param email
+     * @param password
+     * @param firstName
+     * @param lastName
+     * @param gender
+     * @param mobileNumber
+     * @param addressResidential
+     * @param addressSuburb
+     * @param addressPostcode
+     * @param addressState
+     * @param accountStatus
+     * @param accountCredit
+     */
     public User(String onlineMovieStoreID, String isStaff, String email, String password, String firstName, String lastName, String gender, String mobileNumber, String addressResidential, String addressSuburb, String addressPostcode, String addressState, String accountStatus, String accountCredit) {
         this.onlineMovieStoreID = onlineMovieStoreID;
         this.isStaff = isStaff;
@@ -71,121 +91,236 @@ public class User implements Serializable {
         this.accountCredit = accountCredit;
     }
      
-     
-
+    /**
+     *
+     * @return
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     *
+     * @param email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
     
+    /**
+     *
+     * @return
+     */
     public String getOnlineMovieStoreID() {
         return onlineMovieStoreID;
     }
 
+    /**
+     *
+     * @param onlineMovieStoreID
+     */
     public void setOnlineMovieStoreID(String onlineMovieStoreID) {
         this.onlineMovieStoreID = onlineMovieStoreID;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIsStaff() {
         return isStaff;
     }
 
+    /**
+     *
+     * @param isStaff
+     */
     public void setIsStaff(String isStaff) {
         this.isStaff = isStaff;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     *
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     *
+     * @param firstName
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     *
+     * @param lastName
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getGender() {
         return gender;
     }
 
+    /**
+     *
+     * @param gender
+     */
     public void setGender(String gender) {
         this.gender = gender;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getMobileNumber() {
         return mobileNumber;
     }
 
+    /**
+     *
+     * @param mobileNumber
+     */
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAddressResidential() {
         return addressResidential;
     }
 
+    /**
+     *
+     * @param addressResidential
+     */
     public void setAddressResidential(String addressResidential) {
         this.addressResidential = addressResidential;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAddressSuburb() {
         return addressSuburb;
     }
 
+    /**
+     *
+     * @param addressSuburb
+     */
     public void setAddressSuburb(String addressSuburb) {
         this.addressSuburb = addressSuburb;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAddressPostcode() {
         return addressPostcode;
     }
 
+    /**
+     *
+     * @param addressPostcode
+     */
     public void setAddressPostcode(String addressPostcode) {
         this.addressPostcode = addressPostcode;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAddressState() {
         return addressState;
     }
 
+    /**
+     *
+     * @param addressState
+     */
     public void setAddressState(String addressState) {
         this.addressState = addressState;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAccountStatus() {
         return accountStatus;
     }
 
+    /**
+     *
+     * @param accountStatus
+     */
     public void setAccountStatus(String accountStatus) {
         this.accountStatus = accountStatus;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAccountCredit() {
         return accountCredit;
     }
 
+    /**
+     *
+     * @param accountCredit
+     */
     public void setAccountCredit(String accountCredit) {
         this.accountCredit = accountCredit;
     }
     
-     public boolean matchEmail(String email) {
+    /**
+     *
+     * @param email
+     * @return
+     */
+    public boolean matchEmail(String email) {
         return this.email.equals(email.trim());
     }
 

@@ -13,62 +13,63 @@
         <title>JSP Page</title>
     </head>
     <body>
-                    <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
-<jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
-    <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
-</jsp:useBean>
-
-<jsp:useBean id="Validate" 
-                     class="uts.ids.Validate" scope="application"> 
+        <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
+        <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
+            <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
 
+        <jsp:useBean id="Validate" 
+                     class="uts.ids.Validate" scope="application"> 
+        </jsp:useBean>
+        <% String value = "ddd";
+
+            pageContext.findAttribute("errors");
+        %>
         <form action="addMovieAction.jsp" method="POST">
-    <table  cellpadding = "9">
-	<tbody>
-		<tr>
-			<td></td>
-			<td></td>
-			<td> Movie Title: </td>
-			<td> <input type="text" name="movieTitle"></td>
-		</tr>
-		<tr>
-			<td> Genre: </td>
-			<td> <input type="text" name="genre"></td>
-			<td> Movie Price: </td>
-			<td> <input type="text" name="moviePrice" ></td>
-		</tr>
-		<tr>
-			<td> Movie Length: </td>
-			<td> <input type="text" name="movieLength" ></td>
-			<td> Movie Quantity: </td>
-			<td> <input type="text" name="movieQuantity"></td>
-		</tr>
-                                        <tr>
-			<td> Movie Release Date: </td>
-			<td> <input type="text" name="movieReleaseDate"></td>
-			<td> Movie Description: </td>
-			<td> <input type="text" name="movieDescription"></td>
-		</tr>
-	</tbody>
-</table>
-                <input type="submit" value="Add Movie"/>
-                    <input type="hidden" name="updated" value="updated"/>
-</form>
+            <table  cellpadding = "9">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td> Movie Title: </td>
+                        <td> <input type="text" name="movieTitle"></td>
+                    </tr>
+                    <tr>
+                        <td> Genre: </td>
+                        <td> <input type="text" name="genre"></td>
+                        <td> Movie Price: </td>
+                        <td> <input type="text" name="moviePrice" ></td>
+                    </tr>
+                    <tr>
+                        <td> Movie Length: </td>
+                        <td> <input type="text" name="movieLength" ></td>
+                        <td> Movie Quantity: </td>
+                        <td> <input type="text" name="movieQuantity"></td>
+                    </tr>
+                    <tr>
+                        <td> Movie Release Date: </td>
+                        <td> <input type="text" name="movieReleaseDate"></td>
+                        <td> Movie Description: </td>
+                        <td> <input type="text" name="movieDescription"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Add Movie" class="btn btn-info btn-sm"/>
+            <input type="hidden" name="updated" value="updated"/>
+            <span class="error">${value}</span>
+        </form>
         <%
-            //Validate valid = new Validate();
-            //valid.setIsValid(true);
-           // valid.setMovieAdded(t);
+            // valid.setMovieAdded(t);
             if (!Validate.isIsValid()) {
         %> <p>Input is invalid or incomplete </p> 
         <% }
-       
-            %>
-            
-            <%
-            if (Validate.isMovieAdded()) {
+
+        %>
+
+        <%                if (Validate.isMovieAdded()) {
         %> <p>Movie Added </p> <%}
             Validate.setIsValid(true);
-           Validate.setIsValid(false);
-            %>
+            Validate.setIsValid(false);
+        %>
     </body>
 </html>

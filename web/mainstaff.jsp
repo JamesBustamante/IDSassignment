@@ -83,7 +83,7 @@ h1 {
                          <img src="assets/images/mbr-122x80.jpg" title="" style="height: 3.8rem;">
                     
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4">Online Movie Store</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="mainstaff.jsp">Online Movie Store</a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

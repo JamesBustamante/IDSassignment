@@ -13,32 +13,27 @@
 
 
 
-    <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
+<% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
 <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
     <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
 </jsp:useBean>
 
 <jsp:useBean id="search" 
-                     class="uts.ids.Search" scope="application">
-                     </jsp:useBean>
-        <% 
-            Movies movies = catalogueApp.getMovies();
-            ArrayList<Movie> matches = movies.getMovies();
-            ArrayList<Movie> titleMatches = movies.getMovies();
-            ArrayList<Movie> yearMatches = movies.getMovies();
-            ArrayList<Movie> genreMatches = movies.getMovies();
-            //matches.get(1).getMovieDescription();
-            
-            boolean searchHasInput = false;
-            if (!search.getUserInput().equals("")) {
-                searchHasInput = true;
-                matches = movies.getMovieMatches(search.getUserInput());
-                //matches = movies.getGenreMatches(search.getUserInput());
-            }
-          
-        %>
-        
-        <c:set var = "xmltext"> 
+             class="uts.ids.Search" scope="application">
+</jsp:useBean>
+<%
+    Movies movies = catalogueApp.getMovies();
+    ArrayList<Movie> matches = movies.getMovies();
+            //Checks for movie matches
+    boolean searchHasInput = false;
+    if (!search.getUserInput().equals("")) {
+        searchHasInput = true;
+        matches = movies.getMovieMatches(search.getUserInput());
+    }
+
+%>
+<%--  XML transformation of data that is displayed through XSLT --%>
+<c:set var = "xmltext"> 
     <movies> 
         <% for (Movie movie : matches) {
         %>
@@ -57,17 +52,17 @@
 </c:set>
 <c:import url = "movieTableAdmin.xsl" var = "xslt"/>
 <x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>
-<%! String ErrorInput;%>
+<%! String ErrorInput; //Displays error message%>
 <%
-    if (matches.size() == 0) {
-        ErrorInput = search.getUserInput() + " ";
+    if (matches.size() == 0) { //checks if no matches are found from search or default
+        ErrorInput = search.getUserInput() + " "; //set error message
 %>
 <body>
-<p style="color:brown;font-size:30px;"><br><br>Error! Movie Not Found</p>
-<p style="color:brown;font-size:22px;"><br><br></p>
-<p style="color:brown;font-size:30px;"><br><br>&nbsp;Parameters given: <%= ErrorInput%></p>
+    <p style="color:brown;font-size:30px;"><br><br>Error! Movie Not Found</p>
+    <p style="color:brown;font-size:22px;"><br><br></p>
+    <p style="color:brown;font-size:30px;"><br><br>&nbsp;Parameters given: <%= ErrorInput%></p>
 
 </body>
 <% ErrorInput = ""; %>
-<% search.setUserInput(""); %>
-<% } %>
+<% search.setUserInput(""); //set empty for next input from user%>
+<% }%>

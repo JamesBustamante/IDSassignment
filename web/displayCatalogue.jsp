@@ -15,7 +15,7 @@
     <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
 <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
     <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
-</jsp:useBean>
+</jsp:useBean>  <!-- used for the transformation and manipulation of movie.xml  -->
 
 <jsp:useBean id="search" 
                      class="uts.ids.Search" scope="application">
@@ -25,19 +25,16 @@
              class="uts.ids.MultiMovieOrder" scope="session">
 </jsp:useBean>
 
+                     </jsp:useBean>  <!-- calculate searches and manages the input textbox -->
         <% 
             Movies movies = catalogueApp.getMovies();
             ArrayList<Movie> matches = movies.getMovies();
-            ArrayList<Movie> titleMatches = movies.getMovies();
-            ArrayList<Movie> yearMatches = movies.getMovies();
-            ArrayList<Movie> genreMatches = movies.getMovies();
-            //matches.get(1).getMovieDescription();
             
+            //Checks for movie matches
             boolean searchHasInput = false;
             if (!search.getUserInput().equals("")) {
                 searchHasInput = true;
                 matches = movies.getMovieMatches(search.getUserInput());
-                //matches = movies.getGenreMatches(search.getUserInput());
             }
             
             //THIS WILL BE USED TO REMOVE MOVIES FROM THE LIST IF IN AN ORDER.
@@ -55,7 +52,7 @@
 //            matches.removeAll(moviesSelected);
             
         %>
-        
+        <%--  XML transformation of data that is displayed through XSLT --%>
         <c:set var = "xmltext"> 
     <movies> 
         <% for (Movie movie : matches) {
@@ -75,10 +72,10 @@
 <c:import url = "movieTable.xsl" var = "xslt"/>
 <x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>
 
-<%! String ErrorInput;%>
+<%! String ErrorInput; //Displays error message%>
 <%
-    if (matches.size() == 0) {
-        ErrorInput = search.getUserInput() + " ";
+    if (matches.size() == 0) { //checks if no matches are found from search or default
+        ErrorInput = search.getUserInput() + " "; //set error message
 %>
 <body>
 <p style="color:brown;font-size:30px;"><br><br>Error! Movie Not Found</p>
@@ -87,5 +84,5 @@
 
 </body>
 <% ErrorInput = ""; %>
-<% search.setUserInput(""); %>
+<% search.setUserInput(""); //set empty for next input from user %>
 <% } %>

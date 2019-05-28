@@ -19,11 +19,12 @@
 
 
 <%
+    //Get the movie that matches movie that the user selected from the catalogue
     String id = request.getParameter("id");
     Movies movies = catalogueApp.getMovies();
     ArrayList<Movie> allMovies = movies.getMovies();
     ArrayList<Movie> match = new ArrayList<Movie>();
-    for (Movie movie : allMovies) {
+    for (Movie movie : allMovies) { //Searches for the movie
         if (movie.getMovieTitle().equalsIgnoreCase(id)) {
             match.add(movie);
                     break;
