@@ -31,17 +31,20 @@
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
         
 
-
+        // Setting up Java Bean for User
         <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
 
+        // Get the current user in the session
         <%  User user = (User) session.getAttribute("user");
                 
-            String id = request.getParameter("id");
+            // String id = request.getParameter("id");
+            // Get the list of users
             Users users = UserApplication.getUsers();
-
+            
+            // Setting input values to values it GETS
             if (request.getParameter("updated") != null) {
                 user.setFirstName(request.getParameter("firstName"));
                 user.setLastName(request.getParameter("lastName"));
@@ -54,7 +57,8 @@
                 user.setAddressPostcode(request.getParameter("addressPostcode"));
                 user.setAddressState(request.getParameter("addressState"));
                 users = UserApplication.getUsers();
-
+                
+                // Grabbing all input fields so that it can update the XML
                 users.getIDUser(user.getOnlineMovieStoreID()).setFirstName(request.getParameter("firstName"));
                 users.getIDUser(user.getOnlineMovieStoreID()).setLastName(request.getParameter("lastName"));
                 users.getIDUser(user.getOnlineMovieStoreID()).setGender(request.getParameter("gender"));
@@ -152,6 +156,7 @@
                             </div>
                             <div class="form-group">
                                 <h5>Gender &nbsp &nbsp
+                                    // Checks whether radio button is equal to "Male" or "Female"
                                     <% if(user.getGender().equals("Male")) { %>
                                     <input type="radio"  name="gender" value="<%=user.getGender()%>" checked> Male  
                                     <input type="radio"  name="gender" value="Female"> Female
