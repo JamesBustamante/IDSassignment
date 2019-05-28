@@ -23,7 +23,7 @@ and open the template in the editor.
         <accountCredit>70.99</accountCredit>
     </user>
     <user>
-        <onlineMovieStoreID>100002</onlineMovieStoreID>
+        <onlineMovieStoreID>1000002</onlineMovieStoreID>
         <isStaff>true</isStaff>
         <email>staff@mail.com</email>
         <password>1234</password>

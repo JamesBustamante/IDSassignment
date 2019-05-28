@@ -3,7 +3,9 @@
     Created on : 21/05/2019, 12:51:11 PM
     Author     : edwar
 --%>
-
+<%@page import="java.util.ArrayList"%>
+<%@page import="uts.ids.User"%>
+<%@page import="uts.ids.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -64,7 +66,7 @@
                     <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                         <li class="nav-item"><a class="nav-link link text-white display-4"></a></li>
                         <li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> Contact Us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
+                        <li class="nav-item"><a class="nav-link link text-white display-4" href="displayAccessLogs.jsp"><span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> Contact Us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
                         <li class="nav-item"><a class="nav-link link text-white display-4" href="manageAccount.jsp"><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span> Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
                     </ul>
 
@@ -212,6 +214,10 @@ function myFunction() {
 
                     
                     
+                    
+                    <br><br><br>
+                    
+                  <jsp:include page="displayAccessLogs.jsp" flush="true" />
                     
                     <br><br><br>
                     
