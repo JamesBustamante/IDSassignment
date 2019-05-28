@@ -79,18 +79,29 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4">
-                        </a>
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4"></a>
+                </li>
+<!--                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                </li>-->
+                <li class="nav-item">
+                    <% if(multiMovieOrder.movies.isEmpty()) { %>
+                        <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                    <%} else {%>
+                        <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>                        
+                    <%}%>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                </li><li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span>
-                        Contact Us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li><li class="nav-item dropdown"><a class="nav-link link text-white display-4" ><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span>
-                        Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
-                    
-                    Logout</a></div>
+                    <% if (null != user) {%>
+                        <a class="nav-link link text-white display-4" href="manageAccount.jsp"><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span>Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                    <%}%>
+                </li>
+            </ul>
+            <div class="navbar-buttons mbr-section-btn">
+                <a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>Logout</a>
+            </div>
         </div>
     </nav>
     </section>
@@ -101,12 +112,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-10 align-center">
-                <% if (user != null) { %>
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
-                    Welcome <%= user.getFirstName()%></h1>
-                <% } %>
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Purchase Movies below</p>
-                
             </div>
         </div>
     </div>
@@ -115,32 +121,21 @@
 
     <section class="services6 cid-rnOnfBSE9i" id="services6-8">
     <div class="container">
-            <% if (user != null) {
+        <% if (user != null) { 
                 response.sendRedirect("purchaseOrder.jsp");
-            } else { %>        
-        <div class="row">
-            <h2>Login</h2>
-            <p>You must be logged in before continuing with your purchase. Please log in below.</p> <% } %>
-            
-            <!-- STILL NEED TO CREATE THIS PAGE FOR LOGIN
-                THE PAGE SHOULD TAKE THEM TO PURCHASE THE ORDER
-            -->
-            <form action="loginCheckoutAction.jsp" method="post">
-                <table>
-                    <tr>
-                        <td>Email</td>
-                        <td><input name="email" type="text" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input name="password" type="password" value=""></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input value="Login" type="submit"></td>
-                    </tr>   
-                </table>
-            </form> 
+        } else {%>        
+        <div class="row justify-content-md-center">
+            <h1>Purchase Failed</h1>
+        </div>
+        <div class="row justify-content-md-center">
+            <p>You must be logged in before continuing with your purchase. Please log in below.</p>
+        </div>
+        <div class="row justify-content-md-center">
+            <form>
+                <input type="button" value="Login/Register" onclick="location.href='index.jsp'" class="btn-primary"/>
+            </form>            
+        </div>
+        <%} %>
         </div>
     </div>
     </section>

@@ -185,26 +185,29 @@
                                 <input type="text" class="form-control" placeholder="State" name="addressState" value="<%=user.getAddressState()%>"/><br>
                             </div>
 
-                            <div class="col-2">
+                            <div class="col-7">
                                 <input type="submit" value="Save Changes" class="btn btn-primary"/>
                                 <input type="hidden" name="updated" value="updated"/>
                                 <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
                             </div>
-
                         </form>
-                        <div class="col-2">
+    <div class="container">
+        <div class="row">                            
+                        <div class="col-7">
                             <form action="removeUser.jsp">
                                 <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
                                 <input type="submit" name="cancel" value="Remove User" class="btn btn-primary"/>
                             </form>
                         </div>
                                 
-                        <div class="col-2">
+                        <div class="col-7">
                             <form action="userLogs.jsp">
                                 <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
                                 <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
                             </form>
                         </div>
+                    </div>
+                            </div>
                     </div>
                 </div>
             </div>
