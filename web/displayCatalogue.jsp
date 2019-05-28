@@ -25,7 +25,7 @@
              class="uts.ids.MultiMovieOrder" scope="session">
 </jsp:useBean>
 
-                     </jsp:useBean>  <!-- calculate searches and manages the input textbox -->
+                    
         <% 
             Movies movies = catalogueApp.getMovies();
             ArrayList<Movie> matches = movies.getMovies();

@@ -19,7 +19,6 @@
              class="uts.ids.MultiMovieOrder" scope="session">
 </jsp:useBean>
 
-<%--<%@page contentType="text/html" pageEncoding="UTF-8"%>--%>
 
 <%
     String title = request.getParameter("title");
@@ -36,6 +35,7 @@
             }          
         }
     }
+    out.println(match.size());
 
 %>
 

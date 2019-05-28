@@ -120,7 +120,7 @@
             } else { %>        
         <div class="row">
             <h2>Login</h2>
-            <p>You must be logged in before continuing with your purchase. Please log in below.</p>
+            <p>You must be logged in before continuing with your purchase. Please log in below.</p> <% } %>
             
             <!-- STILL NEED TO CREATE THIS PAGE FOR LOGIN
                 THE PAGE SHOULD TAKE THEM TO PURCHASE THE ORDER
