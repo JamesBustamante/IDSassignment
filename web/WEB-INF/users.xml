@@ -38,6 +38,310 @@ and open the template in the editor.
         <accountStatus>Active</accountStatus>
         <accountCredit>70.99</accountCredit>
     </user>
+    <user>
+        <onlineMovieStoreID>1000003</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>HugoPizzey@rhyta.com<email>
+        <password>qwerty</password>
+        <firstName>Hugo</firstName>
+        <lastName>Pizzey</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0402174344</mobileNumber>
+        <addressResidential>54 South Molle Boulevard</addressResidential>
+        <addressSuburb>Hulls Head</addressSuburb>
+         <addressPostcode>4854</addressPostcode>
+         <addressState>QLD</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000004</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>DavidCussen@jourrapide.com<email>
+        <password>qwerty</password>
+        <firstName>David</firstName>
+        <lastName>Cussen</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0402174345</mobileNumber>
+        <addressResidential>3 Maritime Avenue</addressResidential>
+        <addressSuburb>Badgin</addressSuburb>
+         <addressPostcode>6302</addressPostcode>
+         <addressState>WA</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000005</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>ClaudiaFitzroy@dayrep.com<email>
+        <password>qwerty</password>
+        <firstName>Clauda</firstName>
+        <lastName>Fitzroy</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0403127663</mobileNumber>
+        <addressResidential>60 Arthur Street</addressResidential>
+        <addressSuburb>Dripstone</addressSuburb>
+         <addressPostcode>2820</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000006</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>DominicDrew@armyspy.com<email>
+        <password>qwerty</password>
+        <firstName>Dominic</firstName>
+        <lastName>Drew</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0261328799</mobileNumber>
+        <addressResidential>66 Border Drive</addressResidential>
+        <addressSuburb>Bulgary</addressSuburb>
+         <addressPostcode>2650</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000007</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>FlynnNobelius@rhyta.com<email>
+        <password>qwerty</password>
+        <firstName>Flynn</firstName>
+        <lastName>Nobelius</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0249627933</mobileNumber>
+        <addressResidential>7 Mnimbah Road</addressResidential>
+        <addressSuburb>Carrabolla</addressSuburb>
+         <addressPostcode>2311</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000008</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>MadisonShearer@dayrep.com<email>
+        <password>qwerty</password>
+        <firstName>Madison</firstName>
+        <lastName>Shearer</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0745760037</mobileNumber>
+        <addressResidential>21 George Street</addressResidential>
+        <addressSuburb>Windorah</addressSuburb>
+         <addressPostcode>4481</addressPostcode>
+         <addressState>QLD</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000009</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>TylerBelbin@rhyta.com<email>
+        <password>qwerty</password>
+        <firstName>Tyler</firstName>
+        <lastName>Belbin</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0740939125</mobileNumber>
+        <addressResidential>58 Glen William Rd</addressResidential>
+        <addressSuburb>Amber</addressSuburb>
+         <addressPostcode>4871</addressPostcode>
+         <addressState>QLD</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000010</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>MadeleineRays@teleworm.us<email>
+        <password>qwerty</password>
+        <firstName>Madeleine</firstName>
+        <lastName>Rays</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0246107741</mobileNumber>
+        <addressResidential>80 Bresnahans Lane</addressResidential>
+        <addressSuburb>Upper Kangaroo River</addressSuburb>
+         <addressPostcode>2577</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000011</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>MiaLambrick@rhyta.com<email>
+        <password>qwerty</password>
+        <firstName>Mia</firstName>
+        <lastName>Lambrick</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0491570156</mobileNumber>
+        <addressResidential>39 Denison Road</addressResidential>
+        <addressSuburb>Rosebud Plaza</addressSuburb>
+         <addressPostcode>3939</addressPostcode>
+         <addressState>VIC</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000012</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>calebJoske@jourrapide.com<email>
+        <password>qwerty</password>
+        <firstName>Caleb</firstName>
+        <lastName>Joske</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0491570157</mobileNumber>
+        <addressResidential>95 Oriana Street</addressResidential>
+        <addressSuburb>Halloran</addressSuburb>
+         <addressPostcode>2259</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000013</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>ElizaRendall@teleworm.us<email>
+        <password>qwerty</password>
+        <firstName>Eliza</firstName>
+        <lastName>Rendall</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0491570158</mobileNumber>
+        <addressResidential>35 Ugoa Street</addressResidential>
+        <addressSuburb>Tarbuck Bay</addressSuburb>
+         <addressPostcode>2428</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000014</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>BrockCorby@dayrep.com<email>
+        <password>qwerty</password>
+        <firstName>Brock</firstName>
+        <lastName>Corby</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0491570159</mobileNumber>
+        <addressResidential>88 Florabunda Lane</addressResidential>
+        <addressSuburb>Douglas Park</addressSuburb>
+         <addressPostcode>2569</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000015</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>MadisonBelstead@dayrep.com<email>
+        <password>qwerty</password>
+        <firstName>Madison</firstName>
+        <lastName>Belstead</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0489005024</mobileNumber>
+        <addressResidential>95 Daly Terrace</addressResidential>
+        <addressSuburb>Carramar</addressSuburb>
+         <addressPostcode>6031</addressPostcode>
+         <addressState>WA</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000016</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>TahliaGlew@jourrapide.com<email>
+        <password>qwerty</password>
+        <firstName>Tahlia</firstName>
+        <lastName>Glew</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0489005025</mobileNumber>
+        <addressResidential>70 Myrtyle Street</addressResidential>
+        <addressSuburb>Stewarton</addressSuburb>
+         <addressPostcode>3725</addressPostcode>
+         <addressState>VIC</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000017</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>BellaFoy@dayrep.com<email>
+        <password>qwerty</password>
+        <firstName>Bella</firstName>
+        <lastName>Foy</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0489005026</mobileNumber>
+        <addressResidential>54 Muscat Street</addressResidential>
+        <addressSuburb>New Carlbeon</addressSuburb>
+         <addressPostcode>6475</addressPostcode>
+         <addressState>WA</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000018</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>LukeKisch@rhyta.com<email>
+        <password>qwerty</password>
+        <firstName>Luke</firstName>
+        <lastName>Kisch</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0489005027</mobileNumber>
+        <addressResidential>34 McLeans Road</addressResidential>
+        <addressSuburb>Mungungo</addressSuburb>
+         <addressPostcode>4630</addressPostcode>
+         <addressState>QLD</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000019</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>BraydenSpyer@jourrapide.com<email>
+        <password>qwerty</password>
+        <firstName>Brayden</firstName>
+        <lastName>Spyer</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0489005028</mobileNumber>
+        <addressResidential>87 Chester Street</addressResidential>
+        <addressSuburb>Ocean Shores</addressSuburb>
+         <addressPostcode>2483</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000020</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>LucyCurr@rhyta.com<email>
+        <password>qwerty</password>
+        <firstName>Lucy</firstName>
+        <lastName>Curr</lastName>
+        <gender>Female</gender>
+        <mobileNumber>0489005029</mobileNumber>
+        <addressResidential>30 Halsey Road</addressResidential>
+        <addressSuburb>Middleton</addressSuburb>
+         <addressPostcode>5213</addressPostcode>
+         <addressState>SA</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
+    <user>
+        <onlineMovieStoreID>1000021</onlineMovieStoreID>
+        <isStaff>false</isStaff>
+        <email>BenChapman@jourrapide.com<email>
+        <password>qwerty</password>
+        <firstName>Ben</firstName>
+        <lastName>Chapman</lastName>
+        <gender>Male</gender>
+        <mobileNumber>0489005023</mobileNumber>
+        <addressResidential>69 Village Drive</addressResidential>
+        <addressSuburb>Pleasure Point</addressSuburb>
+         <addressPostcode>2172</addressPostcode>
+         <addressState>NSW</addressState>
+        <accountStatus>Active</accountStatus>
+        <accountCredit>300.00</accountCredit>
+    </user>
 </users>
 <!--
  <paymentDetail>
