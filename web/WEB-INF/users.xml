@@ -41,7 +41,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000003</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>HugoPizzey@rhyta.com<email>
+        <email>HugoPizzey@rhyta.com</email>
         <password>qwerty</password>
         <firstName>Hugo</firstName>
         <lastName>Pizzey</lastName>
@@ -57,7 +57,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000004</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>DavidCussen@jourrapide.com<email>
+        <email>DavidCussen@jourrapide.com</email>
         <password>qwerty</password>
         <firstName>David</firstName>
         <lastName>Cussen</lastName>
@@ -73,7 +73,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000005</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>ClaudiaFitzroy@dayrep.com<email>
+        <email>ClaudiaFitzroy@dayrep.com</email>
         <password>qwerty</password>
         <firstName>Clauda</firstName>
         <lastName>Fitzroy</lastName>
@@ -89,7 +89,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000006</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>DominicDrew@armyspy.com<email>
+        <email>DominicDrew@armyspy.com</email>
         <password>qwerty</password>
         <firstName>Dominic</firstName>
         <lastName>Drew</lastName>
@@ -105,7 +105,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000007</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>FlynnNobelius@rhyta.com<email>
+        <email>FlynnNobelius@rhyta.com</email>
         <password>qwerty</password>
         <firstName>Flynn</firstName>
         <lastName>Nobelius</lastName>
@@ -121,7 +121,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000008</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>MadisonShearer@dayrep.com<email>
+        <email>MadisonShearer@dayrep.com</email>
         <password>qwerty</password>
         <firstName>Madison</firstName>
         <lastName>Shearer</lastName>
@@ -137,7 +137,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000009</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>TylerBelbin@rhyta.com<email>
+        <email>TylerBelbin@rhyta.com</email>
         <password>qwerty</password>
         <firstName>Tyler</firstName>
         <lastName>Belbin</lastName>
@@ -153,7 +153,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000010</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>MadeleineRays@teleworm.us<email>
+        <email>MadeleineRays@teleworm.us</email>
         <password>qwerty</password>
         <firstName>Madeleine</firstName>
         <lastName>Rays</lastName>
@@ -169,7 +169,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000011</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>MiaLambrick@rhyta.com<email>
+        <email>MiaLambrick@rhyta.com</email>
         <password>qwerty</password>
         <firstName>Mia</firstName>
         <lastName>Lambrick</lastName>
@@ -185,7 +185,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000012</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>calebJoske@jourrapide.com<email>
+        <email>calebJoske@jourrapide.com</email>
         <password>qwerty</password>
         <firstName>Caleb</firstName>
         <lastName>Joske</lastName>
@@ -201,7 +201,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000013</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>ElizaRendall@teleworm.us<email>
+        <email>ElizaRendall@teleworm.us</email>
         <password>qwerty</password>
         <firstName>Eliza</firstName>
         <lastName>Rendall</lastName>
@@ -217,7 +217,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000014</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>BrockCorby@dayrep.com<email>
+        <email>BrockCorby@dayrep.com</email>
         <password>qwerty</password>
         <firstName>Brock</firstName>
         <lastName>Corby</lastName>
@@ -233,7 +233,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000015</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>MadisonBelstead@dayrep.com<email>
+        <email>MadisonBelstead@dayrep.com</email>
         <password>qwerty</password>
         <firstName>Madison</firstName>
         <lastName>Belstead</lastName>
@@ -249,7 +249,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000016</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>TahliaGlew@jourrapide.com<email>
+        <email>TahliaGlew@jourrapide.com</email>
         <password>qwerty</password>
         <firstName>Tahlia</firstName>
         <lastName>Glew</lastName>
@@ -265,7 +265,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000017</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>BellaFoy@dayrep.com<email>
+        <email>BellaFoy@dayrep.com</email>
         <password>qwerty</password>
         <firstName>Bella</firstName>
         <lastName>Foy</lastName>
@@ -281,7 +281,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000018</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>LukeKisch@rhyta.com<email>
+        <email>LukeKisch@rhyta.com</email>
         <password>qwerty</password>
         <firstName>Luke</firstName>
         <lastName>Kisch</lastName>
@@ -297,7 +297,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000019</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>BraydenSpyer@jourrapide.com<email>
+        <email>BraydenSpyer@jourrapide.com</email>
         <password>qwerty</password>
         <firstName>Brayden</firstName>
         <lastName>Spyer</lastName>
@@ -313,7 +313,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000020</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>LucyCurr@rhyta.com<email>
+        <email>LucyCurr@rhyta.com</email>
         <password>qwerty</password>
         <firstName>Lucy</firstName>
         <lastName>Curr</lastName>
@@ -329,7 +329,7 @@ and open the template in the editor.
     <user>
         <onlineMovieStoreID>1000021</onlineMovieStoreID>
         <isStaff>false</isStaff>
-        <email>BenChapman@jourrapide.com<email>
+        <email>BenChapman@jourrapide.com</email>
         <password>qwerty</password>
         <firstName>Ben</firstName>
         <lastName>Chapman</lastName>
