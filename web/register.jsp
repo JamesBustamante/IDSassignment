@@ -25,10 +25,13 @@
                     <div class="offset-3">
                         <h1 class="display-3"><b>Register</b></h1>
                     </div>
-                    
+                    <br>
                     <div class="offset-1">
-                        Enter your details below to register for the Movie Store<br>
+                        <p> Enter your details below to register for the Movie Store</p>
+                        <p> Please make sure you haven't left any empty fields, have a legitimate email address and your password must have: </p>
+                        <p>  At least 8 characters, must contain 1 uppercase letter, 1 lowercase letter and 1 number</p>
                         <br>
+                        
                     </div>
 
                     <div class="form-group">
