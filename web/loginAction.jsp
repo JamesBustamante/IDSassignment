@@ -6,6 +6,7 @@
 
 <%@page import="uts.ids.Users"%>
 <%@page import="uts.ids.User"%>
+<%@ page import = "java.io.*,java.util.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -33,9 +34,10 @@
             User loginUser = users.login(email, password);
             if (loginUser != null) {
                 session.setAttribute("user", loginUser);
-                if  (loginUser.getIsStaff().equalsIgnoreCase("false")) {
+                if (loginUser.getIsStaff().equalsIgnoreCase("false")) {
+                    response.sendRedirect("main.jsp");
         %>
-         <p>Login successful. Click <a href="main.jsp">here</a> to enter the main page.</p>
+         
          <%}  else {%>
          <p>Login successful. Click <a href="mainstaff.jsp">here</a> to enter staff page.</p> <% } %>
          <% } else {
