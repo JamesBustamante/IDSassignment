@@ -20,6 +20,11 @@
 <jsp:useBean id="search" 
                      class="uts.ids.Search" scope="application">
                      </jsp:useBean>
+    
+<jsp:useBean id="multiMovieOrder" 
+             class="uts.ids.MultiMovieOrder" scope="session">
+</jsp:useBean>
+
         <% 
             Movies movies = catalogueApp.getMovies();
             ArrayList<Movie> matches = movies.getMovies();
@@ -35,6 +40,19 @@
                 //matches = movies.getGenreMatches(search.getUserInput());
             }
             
+            //THIS WILL BE USED TO REMOVE MOVIES FROM THE LIST IF IN AN ORDER.
+            
+//            ArrayList<Movie> moviesSelected = new ArrayList<Movie>();
+//            for (String movie : multiMovieOrder.movies){
+//                for(Movie m : matches){
+//                    if(m.getMovieTitle().equals(movie)){
+//                        moviesSelected.add(m);
+//                    }
+//                }
+//            }
+//            
+//            //Removes movies from list if it already exits in an order.
+//            matches.removeAll(moviesSelected);
             
         %>
         

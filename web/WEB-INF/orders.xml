@@ -12,5 +12,11 @@ and open the template in the editor.
         <onlineMovieStoreID></onlineMovieStoreID>
         <orderDate></orderDate>
         <orderStatus></orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID></movieID>
+                <movieTitle></movieTitle>
+            </moviePurchase>
+        </purchases>
     </order>
 </orders>

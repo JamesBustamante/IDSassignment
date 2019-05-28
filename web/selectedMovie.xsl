@@ -35,7 +35,8 @@
                     <th>Title</th>
                     <th>Genre</th>
                     <th>Release Date</th>
-                    <th>Available Copies</th>
+                    <th>Available</th>
+                    <th>Price</th>
                     <th></th>
                 </tr>
             </thead>
@@ -52,7 +53,7 @@
                 <img src="{picture}" align="left" height="100" width="75"/>
             </td>   
             <td>
-                <xsl:value-of select="/movies/movie/movieTitle"/>
+                <xsl:value-of select="movieTitle"/>
             </td>         
             <td>
                 <xsl:value-of select="genre"/>
@@ -64,8 +65,11 @@
                 <xsl:value-of select="movieQuantity"/>
             </td>
             <td>
+                $<xsl:value-of select="moviePrice"/>
+            </td>
+            <td>
                 <form action="removeMovieFromOrderAction.jsp" method="get">   <!-- Creates the button to remove the selected movie.-->
-                    <input type="hidden" name="id" value="{title}"/>
+                    <input type="hidden" name="title" value="{movieTitle}"/>
                     <input type="submit" value="Remove" name="removeMovie" class="btn-primary"/>
                 </form>
             </td>

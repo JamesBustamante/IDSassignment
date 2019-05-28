@@ -24,7 +24,7 @@
         <%
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
-        String gender = request.getParameter("gender");
+       String gender = request.getParameter("gender");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String mobileNumber = request.getParameter("mobileNumber");
