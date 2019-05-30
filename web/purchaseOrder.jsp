@@ -62,7 +62,7 @@
             Movies movies = movieApplication.getMovies();
             ArrayList<Movie> all = movies.getMovies();
             
-            Orders orders = orderApplication.getOrders();
+//            Orders orders = orderApplication.getOrders();
             
             //The List that will hold the converted movie titles into movie objects
             ArrayList<Movie> match = new ArrayList<Movie>();
@@ -83,7 +83,7 @@
             
 //            orders.addOrder(order);
 //            orderApplication.updateXML(orders, filePath1);
-            
+//            
             
         %>
             
@@ -129,24 +129,20 @@
                 <li class="nav-item">
                     <a class="nav-link link text-white display-4"></a>
                 </li>
-<!--                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                </li>-->
                 <li class="nav-item">
                     <% if(multiMovieOrder.movies.isEmpty()) { %>
                         <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                     <%} else {%>
                         <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>                        
-                    <%}%>
+                    <%}%>                        
                 </li>
                 <li class="nav-item">
                     <% if (null != user) {%>
                         <a class="nav-link link text-white display-4" href="manageAccount.jsp"><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span>Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                    <%}%>
+                    <%}%>                      
                 </li>
             </ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
-                    
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>                  
                     Logout</a></div>
         </div>
     </nav>
@@ -178,10 +174,9 @@
             <p><%=order.getOrderStatus()%></p>            
         </div>
         <div>
-            <p><%=filePath1%></p>
-            <p><%=orderApplication.getFilePath()%></p>
-            <p><%=orderApplication.getOrders()%></p>  
-            <p><%=orders%></p>
+            <p><%=match%></p>
+            <p><%=all%></p>
+            <p><%=titles%></p>
         </div>
     </div>
     </section>

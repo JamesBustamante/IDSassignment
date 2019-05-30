@@ -39,17 +39,17 @@
             
             //THIS WILL BE USED TO REMOVE MOVIES FROM THE LIST IF IN AN ORDER.
             
-            ArrayList<Movie> moviesSelected = new ArrayList<Movie>();
-            for (String movie : multiMovieOrder.movies){
-                for(Movie m : matches){
-                    if(m.getMovieTitle().equals(movie)){
-                        moviesSelected.add(m);
-                    }
-                }
-            }
+//            ArrayList<Movie> moviesSelected = new ArrayList<Movie>();
+//            for (String movie : multiMovieOrder.movies){
+//                for(Movie m : matches){
+//                    if(m.getMovieTitle().equals(movie)){
+//                        moviesSelected.add(m);
+//                    }
+//                }
+//            }
             
 //            //Removes movies from list if it already exits in an order.
-            matches.removeAll(moviesSelected);
+//            matches.removeAll(moviesSelected);
             
         %>
         <%--  XML transformation of data that is displayed through XSLT --%>
