@@ -47,6 +47,18 @@ public class Movies implements Serializable {
     }
     
     /**
+     * match movies via movie ID
+     * @param ID
+     * @return
+     */
+    public Movie getMoviebyTitle(String Title){
+        for(Movie movie:movies) //itr through movie list
+            if(movie.getMovieTitle().equalsIgnoreCase(Title)) //if Title matched
+                return movie; //return the given movie
+        return null; //else not found
+    }
+    
+    /**
      * remove movie from the movies object ready to be mashalled
      * @param movie
      */

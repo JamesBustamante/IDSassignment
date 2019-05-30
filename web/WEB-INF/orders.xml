@@ -8,15 +8,49 @@ and open the template in the editor.
 <!-- Orders -->
 <orders>
     <order>
-        <orderID></orderID>
-        <onlineMovieStoreID></onlineMovieStoreID>
-        <orderDate></orderDate>
-        <orderStatus></orderStatus>
+        <orderID>101</orderID>
+        <onlineMovieStoreID>1000001</onlineMovieStoreID>
+        <email>robb@gmail.com</email>
+        <orderDate>15-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
         <purchases>
             <moviePurchase>
+                <movieID>1</movieID>
+                <movieTitle>28 days later</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
                 <movieID></movieID>
-                <movieTitle></movieTitle>
             </moviePurchase>
         </purchases>
     </order>
+    <order>
+        <orderID>102</orderID>
+        <onlineMovieStoreID>1000003</onlineMovieStoreID>
+        <email>HugoPizzey@rhyta.com</email>
+        <orderDate>18-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>3</movieID>
+                <movieTitle>Anchorman</movieTitle>
+            </moviePurchase>
+        </purchases>
+    </order>
+    <order>
+        <orderID>103</orderID>
+        <onlineMovieStoreID>1000004</onlineMovieStoreID>
+        <email>DavidCussen@jourrapide.com</email>
+        <orderDate>14-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>5</movieID>
+                <movieTitle>Back to the future</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>10</movieID>
+                <movieTitle>Evan Almighty</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>        
 </orders>

@@ -5,6 +5,7 @@
 --%>
 
 <%@page import="uts.ids.*"%>
+<%@page import="java.util.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <html>
@@ -35,12 +36,57 @@
                 <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
             </jsp:useBean>
             
+        <% String filePath1 = application.getRealPath("WEB-INF/orders.xml");%>
+            <jsp:useBean id="orderApplication" class="uts.ids.OrderApplication" scope="application">
+                <jsp:setProperty name="OrderApplication" property="filePath" value="<%=filePath1%>"/>
+            </jsp:useBean>   
+
+        <% String filePath2 = application.getRealPath("WEB-INF/movies.xml");%>
+            <jsp:useBean id="movieApplication" class="uts.ids.MovieApplication" scope="application">
+                <jsp:setProperty name="movieApplication" property="filePath" value="<%=filePath2%>"/>
+            </jsp:useBean>             
+            
         <jsp:useBean id="multiMovieOrder"
                      class="uts.ids.MultiMovieOrder"
                      scope="session">
         </jsp:useBean>
         
-      
+        <%
+            User user = (User) session.getAttribute("user"); 
+            
+            //List of movie titles from the user's order
+            ArrayList<String> titles = new ArrayList<String>();
+            titles  = multiMovieOrder.movies;
+            
+            //List of all the movies in the system
+            Movies movies = movieApplication.getMovies();
+            ArrayList<Movie> all = movies.getMovies();
+            
+            Orders orders = orderApplication.getOrders();
+            
+            //The List that will hold the converted movie titles into movie objects
+            ArrayList<Movie> match = new ArrayList<Movie>();
+            
+            //Checks and compares each movie against the movie title in the order, and if it matches add to the list
+            for(Movie movie : all){
+                for(String t : titles){
+                    if(movie.getMovieTitle().equals(t)){
+                        match.add(movie);
+                    }
+                }
+            }
+            
+            Random random = new Random();
+            int x = random.nextInt(900) + 121;
+            String id = "" + x;
+            Order order = new Order(id, match, user.getOnlineMovieStoreID(), user.getEmail(), "Submitted");
+            
+//            orders.addOrder(order);
+//            orderApplication.updateXML(orders, filePath1);
+            
+            
+        %>
+            
     <style>
         body {
           background-color: linen;
@@ -58,8 +104,6 @@
         } 
     </style>
     <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
-
-    <% User user = (User) session.getAttribute("user"); %>
 
     <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,8 +168,22 @@
     <section class="services6 cid-rnOnfBSE9i" id="services6-8">
     <div class="container">
         <div class="row">
-            <!-- CONTENT IS GOING IN HERE -->
+            <h1>Order has been confirmed!</h1>
         </div>
+        <div class="row">
+            <p><%=order.getOrderID()%></p>           
+            <p><%=order.getID()%></p>
+            <p><%=order.getEmail()%></p>  
+            <p><%=order.getPurchases()%></p> 
+            <p><%=order.getOrderStatus()%></p>            
+        </div>
+        <div>
+            <p><%=filePath1%></p>
+            <p><%=orderApplication.getFilePath()%></p>
+            <p><%=orderApplication.getOrders()%></p>  
+            <p><%=orders%></p>
+        </div>
+    </div>
     </section>
 
     <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">

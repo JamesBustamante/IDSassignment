@@ -35,6 +35,12 @@
                      scope="session">
         </jsp:useBean>
         
+        <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
+        <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
+            <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
+        </jsp:useBean>         
+        <!-- used for the transformation and manipulation of movie.xml  -->
+        
     <style>
         body {
           background-color: linen;
@@ -112,6 +118,10 @@
     </section>
 
     <section class="services6 cid-rnOnfBSE9i" id="services6-8">
+        
+        <%        
+        %>
+        
     <div class="container">
         <div class="row justify-content-md-center">
             <% multiMovieOrder.movies.clear(); %>
@@ -120,6 +130,7 @@
                 <h2><a href="main.jsp">Click to go back to main page.</a></h2>
             </div>            
         </div>
+    </div>
     </section>
 
     <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">

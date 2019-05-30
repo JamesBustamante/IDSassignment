@@ -60,7 +60,7 @@ public class UserApplication {
 
         this.filePath = filePath;
         FileInputStream fin = new FileInputStream(filePath);
-        users = (Users) u.unmarshal(fin); // This loads the "shop" object
+        users = (Users) u.unmarshal(fin);
         fin.close();
     }
 

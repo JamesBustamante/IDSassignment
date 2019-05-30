@@ -20,7 +20,7 @@ and open the template in the editor.
          <addressPostcode>2456</addressPostcode>
          <addressState>NSW</addressState>
         <accountStatus>Active</accountStatus>
-        <accountCredit>70.99</accountCredit>
+        <accountCredit>300.00</accountCredit>
     </user>
     <user>
         <onlineMovieStoreID>1000002</onlineMovieStoreID>
@@ -36,7 +36,7 @@ and open the template in the editor.
          <addressPostcode>2456</addressPostcode>
          <addressState>NSW</addressState>
         <accountStatus>Active</accountStatus>
-        <accountCredit>70.99</accountCredit>
+        <accountCredit>300.00</accountCredit>
     </user>
     <user>
         <onlineMovieStoreID>1000003</onlineMovieStoreID>
