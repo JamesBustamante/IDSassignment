@@ -40,18 +40,18 @@
 %>
 
 <c:set var = "xmltext">
-<movies>
-    <% for(Movie movie : match) {%>
-    <movie>
-        <movieTitle><%= movie.getMovieTitle()%></movieTitle>
-        <genre><%=movie.getGenre()%></genre>
-        <movieReleaseDate><%=movie.getMovieReleaseDate()%></movieReleaseDate>
-        <moviePrice><%=movie.getMoviePrice()%></moviePrice>
-        <movieQuantity><%=movie.getMovieQuantity()%></movieQuantity>
-        <picture><%=movie.getPicture()%></picture>                
-    </movie>
-    <%}%>
-</movies>
+    <movies>
+        <% for(Movie movie : match) {%>
+        <movie>
+            <movieTitle><%= movie.getMovieTitle()%></movieTitle>
+            <genre><%=movie.getGenre()%></genre>
+            <movieReleaseDate><%=movie.getMovieReleaseDate()%></movieReleaseDate>
+            <moviePrice><%=movie.getMoviePrice()%></moviePrice>
+            <movieQuantity><%=movie.getMovieQuantity()%></movieQuantity>
+            <picture><%=movie.getPicture()%></picture>                
+        </movie>
+        <%}%>
+    </movies>
 </c:set>
 <c:import url = "selectedMovie.xsl" var = "xslt"/>
 <x:transform xml = "${xmltext}" xslt = "${xslt}"></x:transform>

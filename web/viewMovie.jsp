@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 
-    <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
+<% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
 <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
     <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
 </jsp:useBean>
@@ -33,7 +33,7 @@
    
 %>
 
-    <c:set var = "xmltext"> 
+<c:set var = "xmltext"> 
     <movies> 
         <% for (Movie movie : match) {
         %>

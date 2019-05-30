@@ -16,22 +16,22 @@
         <title>JSP Page</title>
     </head>
     <body>
-                    <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
-<jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
-    <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
-</jsp:useBean>
+        <% String filePath = application.getRealPath("WEB-INF/movies.xml");%>
+        <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
+            <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
+        </jsp:useBean>
 
 
-        
-       <%
-    String id = request.getParameter("id");
-    Movies movies = catalogueApp.getMovies();
-    ArrayList<Movie> allMovies = movies.getMovies();
-    Movie myMovieMatch = movies.getMoviebyID(id);
-movies.removeMovie(myMovieMatch);
-catalogueApp.updateXML(movies, filePath);
-response.sendRedirect("manageCatalog.jsp");
 
-%>
+        <%
+     String id = request.getParameter("id");
+     Movies movies = catalogueApp.getMovies();
+     ArrayList<Movie> allMovies = movies.getMovies();
+     Movie myMovieMatch = movies.getMoviebyID(id);
+ movies.removeMovie(myMovieMatch);
+ catalogueApp.updateXML(movies, filePath);
+ response.sendRedirect("manageCatalog.jsp");
+
+        %>
     </body>
 </html>
