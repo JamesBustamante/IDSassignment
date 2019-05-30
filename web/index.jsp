@@ -7,14 +7,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-    
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Login Page</title>
-        <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
-        <link rel="stylesheet" href="Stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css"/>
-        <link rel="stylesheet" href="Stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
-    
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login Page</title>
+    <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
+    <link rel="stylesheet" href="Stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="Stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
+
     <body style="background-color: lightblue">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
@@ -44,16 +44,16 @@
         </section>
         <br/><br/>
         <section class="mt-5">
-        <div class="container-fluid">
-            <div class="row offset-1">
-                <div class="col-md-6">
-                    <h3 class="float-md-right">Just want to browse?</h3>
-                </div>
-                <div class="col-md-6 float-md-left">
-                    <a class="btn btn-primary" href="main.jsp">Click Here!</a>
+            <div class="container-fluid">
+                <div class="row offset-1">
+                    <div class="col-md-6">
+                        <h3 class="float-md-right">Just want to browse?</h3>
+                    </div>
+                    <div class="col-md-6 float-md-left">
+                        <a class="btn btn-primary" href="main.jsp">Click Here!</a>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>       
     </body>
 </html>

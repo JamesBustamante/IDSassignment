@@ -39,6 +39,6 @@
             // Redirect to Logout.jsp as a user cannot be logged in if he deletes his account
             response.sendRedirect("logout.jsp");
         %>
-        
+
     </body>
 </html>

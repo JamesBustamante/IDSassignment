@@ -29,7 +29,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-        
+
 
         // Setting up Java Bean for User
         <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
@@ -37,13 +37,19 @@
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
 
+        <jsp:useBean id="multiMovieOrder"
+                     class="uts.ids.MultiMovieOrder"
+                     scope="session">
+        </jsp:useBean> 
+
+
         // Get the current user in the session
         <%  User user = (User) session.getAttribute("user");
-                
+
             // String id = request.getParameter("id");
             // Get the list of users
             Users users = UserApplication.getUsers();
-            
+
             // Setting input values to values it GETS
             if (request.getParameter("updated") != null) {
                 user.setFirstName(request.getParameter("firstName"));
@@ -57,7 +63,7 @@
                 user.setAddressPostcode(request.getParameter("addressPostcode"));
                 user.setAddressState(request.getParameter("addressState"));
                 users = UserApplication.getUsers();
-                
+
                 // Grabbing all input fields so that it can update the XML
                 users.getIDUser(user.getOnlineMovieStoreID()).setFirstName(request.getParameter("firstName"));
                 users.getIDUser(user.getOnlineMovieStoreID()).setLastName(request.getParameter("lastName"));
@@ -109,20 +115,31 @@
                             <img src="assets/images/mbr-122x80.jpg" title="" style="height: 3.8rem;">
 
                         </span>
-                        <span class="navbar-caption-wrap"><a href="main.jsp" class="navbar-caption text-white display-4">Online Movie Store</a></span>
+                        <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="main.jsp">Online Movie Store</a></span>
                     </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                        <li class="nav-item"><a class="nav-link link text-white display-4"></a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4" ><span class="mbri-magic-stick mbr-iconfont mbr-iconfont-btn"></span> Contact Us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
-                        <li class="nav-item"><a class="nav-link link text-white display-4" href="manageAccount.jsp"><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span> Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-white display-4"></a>
+                        </li>
+                        <!--                <li class="nav-item">
+                                            <a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                                        </li>-->
+                        <li class="nav-item">
+                            <% if (multiMovieOrder.movies.isEmpty()) { %>
+                            <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                            <%} else {%>
+                            <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>                        
+                            <%}%>
+                        </li>
+                        <li class="nav-item">
+                            <% if (null != user) {%>
+                            <a class="nav-link link text-white display-4" href="manageAccount.jsp"><span class="mbrib-setting2 mbr-iconfont mbr-iconfont-btn"></span>Manage Account &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                            <%}%>
+                        </li>
                     </ul>
-
-
                     <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
-
 
                             Logout</a></div>
                 </div>
@@ -156,14 +173,14 @@
                             </div>
                             <div class="form-group">
                                 <h5>Gender &nbsp &nbsp
-                                    // Checks whether radio button is equal to "Male" or "Female"
-                                    <% if(user.getGender().equals("Male")) { %>
+
+                                    <% if (user.getGender().equals("Male")) {%>
                                     <input type="radio"  name="gender" value="<%=user.getGender()%>" checked> Male  
                                     <input type="radio"  name="gender" value="Female"> Female
-                                    <% } else { %>
+                                    <% } else {%>
                                     <input type="radio"  name="gender" value="Male"> Male  
                                     <input type="radio"  name="gender" value="<%=user.getGender()%>" checked> Female
-                                    <% } %>
+                                    <% }%>
                                     <br>
                                 </h5>
                             </div>
@@ -196,23 +213,34 @@
                                 <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
                             </div>
                         </form>
-    <div class="container">
-        <div class="row">                            
-                        <div class="col-7">
-                            <form action="removeUser.jsp">
-                                <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
-                                <input type="submit" name="cancel" value="Remove User" class="btn btn-primary"/>
-                            </form>
-                        </div>
-                                
-                        <div class="col-7">
-                            <form action="userLogs.jsp">
-                                <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
-                                <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
-                            </form>
+                        <div class="container">
+                            <div class="row">                            
+                                <div class="col-7">
+                                    <form action="removeUser.jsp">
+                                        <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
+                                        <input type="submit" name="cancel" value="Remove User" class="btn btn-primary"/>
+                                    </form>
+                                </div>
+
+                                <div class="col-7">
+                                    <form action="userLogs.jsp">
+                                        <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
+                                        <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                            </div>
+                </div>
+            </div>
+        </section>
+        <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
+            <div class="container">
+                <div class="media-container-row align-center mbr-white">
+                    <div class="col-12">
+                        <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                            © Copyright 2019 Created By Ciaran, Ed, James & Max
+                        </p>
                     </div>
                 </div>
             </div>

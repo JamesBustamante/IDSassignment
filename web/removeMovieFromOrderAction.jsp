@@ -18,7 +18,7 @@
         <jsp:useBean id="catalogueApp" class="uts.ids.MovieApplication" scope="application">
             <jsp:setProperty name="catalogueApp" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
-        
+
         <jsp:useBean id="multiMovieOrder"
                      class="uts.ids.MultiMovieOrder"
                      scope="session">

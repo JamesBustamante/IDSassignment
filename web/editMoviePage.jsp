@@ -129,10 +129,10 @@
                     <!--Titles-->
                     <div class="title col-12">
                         <form action="manageCatalog.jsp" align="center"  type="button" class="headertext" >
-    <input type="submit" value="Return to catalogue"class="btn btn-primary" />
-</form>
+                            <input type="submit" value="Return to catalogue"class="btn btn-primary" />
+                        </form>
                         <h2 class="align-left mbr-fonts-style m-0 display-1">Edit Movie</h2>
-                        
+
                     </div>
 
 

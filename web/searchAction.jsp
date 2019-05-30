@@ -12,10 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-                <jsp:useBean id="search" 
+        <jsp:useBean id="search" 
                      class="uts.ids.Search" scope="application">
-                     </jsp:useBean>
-        
+        </jsp:useBean>
+
         <% 
             search.emptySearch();
             search.setUserInput("");

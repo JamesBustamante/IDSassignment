@@ -30,22 +30,22 @@
     <xsl:template match="movies">
         <!--<xsl:apply-templates select="movie/>-->
         <div class="container border">
-        <table cellpadding="10" style="width: 100%">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Release Date</th>
-                    <th>Available</th>
-                    <th>Price</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <xsl:apply-templates select="movie"/>
-            </tbody>
-        </table>
+            <table cellpadding="10" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Release Date</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:apply-templates select="movie"/>
+                </tbody>
+            </table>
         </div>
     </xsl:template>
     
