@@ -3,7 +3,7 @@
     Created on : 18/04/2019, 7:48:50 PM
     Author     : james
 --%>
-
+<!--Importing a few Java Source Packages -->
 <%@page import="uts.ids.Users"%>
 <%@page import="uts.ids.User"%>
 <%@ page import = "java.io.*,java.util.*" %>
@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login Action Page</title>
         <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css"/>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
@@ -42,7 +42,7 @@
     %>
 
     <%} else {%>
-    // If user is admin. Make him click a link to get to Admin Portal
+    <!-- If user is admin. Make him click a link to get to Admin Portal -->
     <p>Login successful. Click <a href="mainstaff.jsp">here</a> to enter staff page.</p> <% } %>
     <% } else {
         // Case for inccorect login

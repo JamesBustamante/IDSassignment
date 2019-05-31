@@ -3,7 +3,7 @@
     Created on : 12/05/2019, 6:48:28 PM
     Author     : james
 --%>
-
+<!-- -->
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="uts.ids.Movie"%>
@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Add Movie Action</title>
     </head>
     <body>
 
