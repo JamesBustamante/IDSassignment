@@ -19,15 +19,16 @@ public class Order implements Serializable{
     
     @XmlElement(name = "orderID")
     private String orderID;
-    @XmlElementWrapper(name = "purchases")
-    @XmlElement(name = "moviePurchase")
-    private ArrayList<Movie> purchases;
     @XmlElement(name = "onlineMovieStoreID") //USER ID
     private String ID;
     @XmlElement(name = "email")
     private String email;
     @XmlElement(name = "orderStatus")
-    private String orderStatus;  
+    private String orderStatus;    
+    @XmlElementWrapper(name = "purchases")
+    @XmlElement(name = "moviePurchase")
+    private ArrayList<Movie> purchases;
+  
     
     public Order(){
     }
@@ -175,7 +176,7 @@ public class Order implements Serializable{
      * @param ID
      * @return boolean
      */
-    public boolean matchIDStatus(String ID) {
+    public boolean matchID(String ID) {
         return this.ID.equals(ID.trim());
     }
 

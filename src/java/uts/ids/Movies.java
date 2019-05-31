@@ -105,4 +105,13 @@ public class Movies implements Serializable {
                 matches.add(movie); //Add to array list 
         return matches; //Return array list
     }
+    
+    public void decrement(Movie m){
+        for(Movie movie : movies){
+            if(movie.getMovieTitle().equals(m.getMovieTitle())){
+                m.decrement();
+                break;
+            }
+        }
+    }
 }

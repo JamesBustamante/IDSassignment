@@ -18,9 +18,6 @@ and open the template in the editor.
                 <movieID>1</movieID>
                 <movieTitle>28 days later</movieTitle>
             </moviePurchase>
-            <moviePurchase>
-                <movieID></movieID>
-            </moviePurchase>
         </purchases>
     </order>
     <order>

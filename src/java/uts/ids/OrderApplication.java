@@ -60,7 +60,7 @@ public class OrderApplication {
 
         this.filePath = filePath;
         FileInputStream fin = new FileInputStream(filePath);
-        orders = (Orders) u.unmarshal(fin); // This loads the "shop" object
+        orders = (Orders) u.unmarshal(fin);
         fin.close();
     }
 

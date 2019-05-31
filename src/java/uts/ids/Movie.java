@@ -253,9 +253,12 @@ public class Movie implements Serializable {
     public void setPicture(String picture) {
         this.picture = picture;
     }
-     
-     
     
+    public void decrement(){
+        int x = Integer.parseInt(this.movieQuantity);
+        x -= 1;
+        this.movieQuantity = String.valueOf(x);
+    }
     
     
 }

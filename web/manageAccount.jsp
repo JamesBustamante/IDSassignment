@@ -228,6 +228,13 @@
                                         <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
                                     </form>
                                 </div>
+                                        
+                                <div class="col-7">
+                                    <form action="userHistory.jsp">
+                                        <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
+                                        <input type="submit" name="historybtn" value="Order History" class="btn btn-primary"/>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

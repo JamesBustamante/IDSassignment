@@ -1,24 +1,21 @@
 <%-- 
-    Document   : purchaseOrder
-    Created on : 28/05/2019, 2:11:48 PM
+    Document   : userHistory
+    Created on : 31/05/2019, 1:21:31 PM
     Author     : Ciaran
 --%>
 
-<%@page import="uts.ids.*"%>
-<%@page import="java.util.*"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="uts.ids.User"%>
+<%@page import="uts.ids.Users"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Purchase</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <title>Order History</title>
         <link type="image/x-icon" href="assets/images/movie_icon.png" rel="shortcut icon"/>
-        <meta name="description" content="Web Page Creator Description">
-
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css"/>
         <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
         <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
         <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -28,72 +25,31 @@
         <link rel="stylesheet" href="assets/dropdown/css/style.css">
         <link rel="stylesheet" href="assets/theme/css/style.css">
         <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-
     </head>
     <body style="background-color: lightblue">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
+        <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+
+        // Setting up Java Bean for User
         <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
 
-        <% String filePath1 = application.getRealPath("WEB-INF/orders.xml");%>
-        <jsp:useBean id="orderApplication" class="uts.ids.OrderApplication" scope="application">
-            <jsp:setProperty name="orderApplication" property="filePath" value="<%=filePath1%>"/>
-        </jsp:useBean>   
-
-        <% String filePath2 = application.getRealPath("WEB-INF/movies.xml");%>
-        <jsp:useBean id="movieApplication" class="uts.ids.MovieApplication" scope="application">
-            <jsp:setProperty name="movieApplication" property="filePath" value="<%=filePath2%>"/>
-        </jsp:useBean>             
-
         <jsp:useBean id="multiMovieOrder"
                      class="uts.ids.MultiMovieOrder"
                      scope="session">
-        </jsp:useBean>
+        </jsp:useBean> 
 
-        <%
-            User user = (User) session.getAttribute("user"); 
-            
-            //List of movie titles from the user's order
-            ArrayList<String> titles = new ArrayList<String>();
-            titles  = multiMovieOrder.movies;
-            
-            //List of all the movies in the system
-            Movies movies = movieApplication.getMovies();
-            ArrayList<Movie> all = movies.getMovies();
-            
-            Orders orders = orderApplication.getOrders();
-            
-            //The List that will hold the converted movie titles into movie objects
-            ArrayList<Movie> match = new ArrayList<Movie>();
-            
-            //Checks and compares each movie against the movie title in the order, and if it matches add to the list
-            for(Movie movie : all){
-                for(String t : titles){
-                    if(movie.getMovieTitle().equals(t)){
-                        match.add(movie);
-                    }
-                }
-            }
-            
-            Random random = new Random();
-            int x = random.nextInt(900) + 121;
-            String id = "" + x;
-            Order order = new Order(id, match, user.getOnlineMovieStoreID(), user.getEmail(), "Submitted");
-            
-            orders.addOrder(order);
-            orderApplication.updateXML(orders, filePath1);
-            
-            
-            for(Movie m : all){
-                for(Movie mov : match){
-                    if(m.getMovieTitle().equals(mov.getMovieTitle())){
-                        m.decrement();
-                    }
-                }
-            }
-            multiMovieOrder.movies.clear();
-            
+
+        // Get the current user in the session
+        <%  User user = (User) session.getAttribute("user");
+
+            // String id = request.getParameter("id");
+            // Get the list of users
+            Users users = UserApplication.getUsers();
         %>
 
         <style>
@@ -113,6 +69,7 @@
             } 
         </style>
         <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
+
 
             <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,11 +95,8 @@
                         <li class="nav-item">
                             <a class="nav-link link text-white display-4"></a>
                         </li>
-                        <!--                <li class="nav-item">
-                                            <a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                                        </li>-->
                         <li class="nav-item">
-                            <% if(multiMovieOrder.movies.isEmpty()) { %>
+                            <% if (multiMovieOrder.movies.isEmpty()) { %>
                             <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                             <%} else {%>
                             <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>                        
@@ -160,40 +114,16 @@
                 </div>
             </nav>
         </section>
-
-        <section class="engine"><a >easy website builder</a></section>
-        <section class="header1 cid-rnOnPBZFRR" id="header16-a">
-
+                        
+        <section once="content" class="services6 cid-rnOnfBSE9i" id="services6-8">
             <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-10 align-center">
-                        <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Purchase Movies below</p>
-                    </div>
+                <div class="row">
+                    <jsp:include page="displayHistory.jsp" flush="true"/>
                 </div>
             </div>
-
         </section>
-
-        <section class="services6 cid-rnOnfBSE9i" id="services6-8">
-            <div class="container" style="text-align: center">
-                <div class="row">
-                    <h1>Order has been confirmed!</h1>
-                </div>
-                <div class="row">
-                    <h2>Your order number is: <%=id%></h2>
-                </div>
-                <div class="row">
-                    <p>Click <a href="userHistory.jsp">here</a> to track your order.</p>
-                </div>                
-            </div>
-        </section>
-
+                        
         <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
-
-
-
-
-
             <div class="container">
                 <div class="media-container-row align-center mbr-white">
                     <div class="col-12">
@@ -203,17 +133,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-
-        <script src="assets/web/assets/jquery/jquery.min.js"></script>
-        <script src="assets/popper/popper.min.js"></script>
-        <script src="assets/tether/tether.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/smoothscroll/smooth-scroll.js"></script>
-        <script src="assets/dropdown/js/script.min.js"></script>
-        <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-        <script src="assets/theme/js/script.js"></script>
-
+        </section>                        
     </body>
 </html>
