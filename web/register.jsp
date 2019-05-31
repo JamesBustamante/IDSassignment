@@ -18,7 +18,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-
         <section>
             <div class="container">
                 <div class="col-6 offset-md-3">
@@ -31,10 +30,9 @@
                         <p> Please make sure you haven't left any empty fields, have a legitimate email address and your password must have: </p>
                         <p> At least 8 characters, must contain 1 uppercase letter, 1 lowercase letter and 1 number</p>
                         <br>
-
                     </div>
-
                     <div class="form-group">
+                        <!--HTML form that sends a POST request to register action with all the registration details in the form -->
                         <form action="register-action.jsp" method="POST">
                             <h3>Personal Details</h3>
                             <div class="form-group">
