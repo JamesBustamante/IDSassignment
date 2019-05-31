@@ -36,7 +36,7 @@
                         <th>Your User ID</th>
                         <th>Order Status</th>
                         <th>Order Date</th>
-<!--                        <th>Total</th>-->
+                        <!--                        <th>Total</th>-->
                         <th>Cancel Order?</th>
                     </tr>
                 </thead>
@@ -62,10 +62,10 @@
                 <!--<xsl:value-of select="orderDate"/>-->
             </td>
             <td>
-            <form action="removeOrderAction.jsp" method="get">
-                <input type="hidden" name="orderID" value="{orderID}"/>
-                <input type="submit" value="Cancel" name="removeOrder" class="btn-primary"/>
-            </form>
+                <form action="removeOrderAction.jsp" method="get">
+                    <input type="hidden" name="orderID" value="{orderID}"/>
+                    <input type="submit" value="Cancel" name="removeOrder" class="btn-primary"/>
+                </form>
             </td>
         </tr>        
     </xsl:template>

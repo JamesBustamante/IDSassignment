@@ -125,76 +125,76 @@
                 </li>
                 <li class="nav-item">
                     <% if(multiMovieOrder.movies.isEmpty()) { %>
-                        <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                     <%}%>
-                </li>  
-                </ul>
-                </div> 
-        </section>
-
-        <section class="services6 cid-rnOnfBSE9i" id="services6-8">
-            <div class="container">
-                <div class="row">
-
-                    <% if(multiMovieOrder.movies.isEmpty() && request.getParameter("title") == null){%>
-                    <div class="align-center col-md-12">
-                        <h1>Your Order is Empty!</h1>
-                        <h2><a href="main.jsp">Click Here To Add Movies To Your Order</h2>
-                    </div>
-                    <%} else {%>
-
-                    <jsp:include page="displayOrder.jsp" flush="true"/>
-                    <div class="row" style="padding-top: 25px; padding-right: 25px; padding-left: 25px">
-                        <table>
-                            <tr>
-                                <td>
-                                    <form>
-                                        <input type="button" value="Choose Another Movie" onclick="location.href = 'main.jsp'" class="btn-primary"/>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="purchaseOrderUserCheck.jsp" method="get">
-                                        <input type="submit" value="Purchase Order" class="btn-primary"/>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="cancelOrderConfirmation.jsp" method="get">
-                                        <input type="submit" value="Cancel Order" class="btn-primary"/>
-                                    </form>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
+                    <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                     <%}%>
-                    </section>
+                </li>  
+            </ul>
+        </div> 
+    </section>
 
-                    <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
+    <section class="services6 cid-rnOnfBSE9i" id="services6-8">
+        <div class="container">
+            <div class="row">
+
+                <% if(multiMovieOrder.movies.isEmpty() && request.getParameter("title") == null){%>
+                <div class="align-center col-md-12">
+                    <h1>Your Order is Empty!</h1>
+                    <h2><a href="main.jsp">Click Here To Add Movies To Your Order</h2>
+                </div>
+                <%} else {%>
+
+                <jsp:include page="displayOrder.jsp" flush="true"/>
+                <div class="row" style="padding-top: 25px; padding-right: 25px; padding-left: 25px">
+                    <table>
+                        <tr>
+                            <td>
+                                <form>
+                                    <input type="button" value="Choose Another Movie" onclick="location.href = 'main.jsp'" class="btn-primary"/>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="purchaseOrderUserCheck.jsp" method="get">
+                                    <input type="submit" value="Purchase Order" class="btn-primary"/>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="cancelOrderConfirmation.jsp" method="get">
+                                    <input type="submit" value="Cancel Order" class="btn-primary"/>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <%}%>
+                </section>
+
+                <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
 
 
 
 
 
-                        <div class="container">
-                            <div class="media-container-row align-center mbr-white">
-                                <div class="col-12">
-                                    <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                                        © Copyright 2019 Created By Ciaran, Ed, James & Max
-                                    </p>
-                                </div>
+                    <div class="container">
+                        <div class="media-container-row align-center mbr-white">
+                            <div class="col-12">
+                                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                                    © Copyright 2019 Created By Ciaran, Ed, James & Max
+                                </p>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
 
-                    <script src="assets/web/assets/jquery/jquery.min.js"></script>
-                    <script src="assets/popper/popper.min.js"></script>
-                    <script src="assets/tether/tether.min.js"></script>
-                    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-                    <script src="assets/smoothscroll/smooth-scroll.js"></script>
-                    <script src="assets/dropdown/js/script.min.js"></script>
-                    <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-                    <script src="assets/theme/js/script.js"></script>
+                <script src="assets/web/assets/jquery/jquery.min.js"></script>
+                <script src="assets/popper/popper.min.js"></script>
+                <script src="assets/tether/tether.min.js"></script>
+                <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+                <script src="assets/smoothscroll/smooth-scroll.js"></script>
+                <script src="assets/dropdown/js/script.min.js"></script>
+                <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+                <script src="assets/theme/js/script.js"></script>
 
-                    </body>
-                    </html>
+                </body>
+                </html>

@@ -30,20 +30,19 @@
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/popper.min.js"></script>
         <script src="Stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
-
-        // Setting up Java Bean for User
+        <!--Setting up bean for user-->
         <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="UserApplication" class="uts.ids.UserApplication" scope="application">
             <jsp:setProperty name="UserApplication" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
 
+        <!-- Setting up bean for movie order-->
         <jsp:useBean id="multiMovieOrder"
                      class="uts.ids.MultiMovieOrder"
                      scope="session">
         </jsp:useBean> 
 
-
-        // Get the current user in the session
+        <!--Get the current user in the session-->
         <%  User user = (User) session.getAttribute("user");
 
             // String id = request.getParameter("id");
@@ -173,10 +172,11 @@
                             </div>
                             <div class="form-group">
                                 <h5>Gender &nbsp &nbsp
-
+                                    <!--If user is equal to male -->
                                     <% if (user.getGender().equals("Male")) {%>
                                     <input type="radio"  name="gender" value="<%=user.getGender()%>" checked> Male  
                                     <input type="radio"  name="gender" value="Female"> Female
+                                    <!--If user is equal to female -->
                                     <% } else {%>
                                     <input type="radio"  name="gender" value="Male"> Male  
                                     <input type="radio"  name="gender" value="<%=user.getGender()%>" checked> Female
@@ -185,6 +185,7 @@
                                 </h5>
                             </div>
                             <div class="form-group">
+                                <!--Getting the values for the respective fields -->
                                 <input type="text" class="form-control" placeholder="Email" name="email" value="<%=user.getEmail()%>"/><br>
                             </div>
                             <div class="form-group">
@@ -206,7 +207,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="State" name="addressState" value="<%=user.getAddressState()%>"/><br>
                             </div>
-
+                            <!-- -->
                             <div class="col-7">
                                 <input type="submit" value="Save Changes" class="btn btn-primary"/>
                                 <input type="hidden" name="updated" value="updated"/>
@@ -228,7 +229,7 @@
                                         <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
                                     </form>
                                 </div>
-                                        
+
                                 <div class="col-7">
                                     <form action="userHistory.jsp">
                                         <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
