@@ -88,14 +88,14 @@
             orders.addOrder(order);
             orderApplication.updateXML(orders, filePath1);
             
-            
             for(Movie m : all){
                 for(Movie mov : match){
                     if(m.getMovieTitle().equals(mov.getMovieTitle())){
-                        m.decrement();
+                        movies.getMoviebyTitle(mov.getMovieTitle()).decrement();
                     }
                 }
             }
+            movieApplication.updateXML(movies, filePath2);
             multiMovieOrder.movies.clear();
         %>
 

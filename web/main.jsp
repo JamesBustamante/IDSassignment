@@ -118,7 +118,7 @@
                             Welcome <%= user.getFirstName()%></h1>
                             <% }%>
 
-                        <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Purchase Movies below</p>
+                        <p class="mbr-text pb-3 mbr-fonts-style display-5">Browse, Search and Pruchase Movies below</p>
 
                     </div>
                 </div>
@@ -138,6 +138,8 @@
                     <!--Titles-->
                     <div class="title col-12">
                         <h2 class="align-left mbr-fonts-style m-0 display-1">Movie Catalogue</h2>
+
+
                         <!-- Search form -->
                         <form class="form-inline" action="searchAction.jsp" method="get">
                             <i class="fas fa-search" aria-hidden="true"></i>
@@ -148,10 +150,15 @@
                         </form>
                     </div>
 
+
                     <jsp:include page="displayCatalogue.jsp" flush="true" />
 
                     </section>
                     <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
+
+
+
+
 
                         <div class="container">
                             <div class="media-container-row align-center mbr-white">

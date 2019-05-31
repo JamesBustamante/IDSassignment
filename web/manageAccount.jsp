@@ -3,7 +3,7 @@
     Created on : 09/04/2019, 5:13:15 PM
     Author     : Ciaran
 --%>
-<!-- Importing various java source packages -->
+
 <%@page import="java.util.ArrayList"%>
 <%@page import="uts.ids.User"%>
 <%@page import="uts.ids.Users"%>
@@ -74,7 +74,6 @@
                 users.getIDUser(user.getOnlineMovieStoreID()).setAddressSuburb(request.getParameter("addressSuburb"));
                 users.getIDUser(user.getOnlineMovieStoreID()).setAddressPostcode(request.getParameter("addressPostcode"));
                 users.getIDUser(user.getOnlineMovieStoreID()).setAddressState(request.getParameter("addressState"));
-                // Updating the users.xml
                 UserApplication.updateXML(users, filePath);
 
         %><p>Changes Saved</p><%                    }
@@ -82,7 +81,7 @@
 
         <style>
             body {
-                background-color: lightblue;
+                background-color: linen;
             }
 
             .logincontent {
@@ -97,6 +96,8 @@
             } 
         </style>
         <section class="menu cid-rnOmffV0YR" once="menu" id="menu1-5">
+
+
             <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <div class="hamburger">
@@ -121,11 +122,12 @@
                         <li class="nav-item">
                             <a class="nav-link link text-white display-4"></a>
                         </li>
+                        <!--                <li class="nav-item">
+                                            <a class="nav-link link text-white display-4" ><span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Current Wallet: $70.66 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+                                        </li>-->
                         <li class="nav-item">
-                            <!--If the cart is empty  -->
                             <% if (multiMovieOrder.movies.isEmpty()) { %>
                             <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                            <!--If there is one or more movie in the cart change the icon -->
                             <%} else {%>
                             <a class="nav-link link text-white display-4" href="orderPage.jsp" ><span class="mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span> My Order &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>                        
                             <%}%>
@@ -136,12 +138,13 @@
                             <%}%>
                         </li>
                     </ul>
-                    <div class="navbar-buttons mbr-section-btn">
-                        <a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>Logout</a>
-                    </div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"  href="logout.jsp"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
+
+                            Logout</a></div>
                 </div>
             </nav>
         </section>
+
         <section>
             <div class="container">
                 <div class="col-6 offset-md-3">
@@ -152,10 +155,12 @@
                         <br>
                         <h1 class="display-3"><b>Change your account details</b></h1>
                     </div>
+
                     <div class="offset-1">
                         View or Change your details below<br>
                         <br>
                     </div>
+
                     <div class="form-group">
                         <form action="manageAccount.jsp" method="POST">
                             <h3>Personal Details</h3>
@@ -202,39 +207,41 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="State" name="addressState" value="<%=user.getAddressState()%>"/><br>
                             </div>
-                            <!--Button to Save Changes -->
+                            <!-- -->
                             <div class="col-7">
                                 <input type="submit" value="Save Changes" class="btn btn-primary"/>
                                 <input type="hidden" name="updated" value="updated"/>
                                 <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
                             </div>
                         </form>
-                        <!--Button to Delete Account -->
-                        <div class="col-7">
-                            <form action="removeUser.jsp">
-                                <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
-                                <input type="submit" name="cancel" value="Delete Account" class="btn btn-primary"/>
-                            </form>
-                        </div>
-                        <!--Button to access the User Logs -->
-                        <div class="col-7">
-                            <form action="userLogs.jsp">
-                                <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
-                                <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
-                            </form>
-                        </div>
-                        <!--Button to access the Order History-->
-                        <div class="col-7">
-                            <form action="userHistory.jsp">
-                                <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
-                                <input type="submit" name="historybtn" value="Order History" class="btn btn-primary"/>
-                            </form>
+                        <div class="container">
+                            <div class="row">                            
+                                <div class="col-7">
+                                    <form action="removeUser.jsp">
+                                        <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
+                                        <input type="submit" name="cancel" value="Remove User" class="btn btn-primary"/>
+                                    </form>
+                                </div>
+
+                                <div class="col-7">
+                                    <form action="userLogs.jsp">
+                                        <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
+                                        <input type="submit" name="cancel" value="Access User Logs" class="btn btn-primary"/>
+                                    </form>
+                                </div>
+
+                                <div class="col-7">
+                                    <form action="userHistory.jsp">
+                                        <input type="hidden" name="id" value="<%=user.getOnlineMovieStoreID()%>"/>
+                                        <input type="submit" name="historybtn" value="Order History" class="btn btn-primary"/>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Footer-->
         <section once="footers" class="cid-rnOnTVUo9Q" id="footer6-b">
             <div class="container">
                 <div class="media-container-row align-center mbr-white">
