@@ -11,7 +11,7 @@ and open the template in the editor.
         <orderID>101</orderID>
         <onlineMovieStoreID>1000001</onlineMovieStoreID>
         <email>robb@gmail.com</email>
-        <orderDate>15-05-2019</orderDate>
+        <orderDate>15/05/2019</orderDate>
         <orderStatus>Submitted</orderStatus>
         <purchases>
             <moviePurchase>
@@ -50,4 +50,294 @@ and open the template in the editor.
             </moviePurchase>
         </purchases>
     </order>        
+    <order>
+        <orderID>104</orderID>
+        <onlineMovieStoreID>1000005</onlineMovieStoreID>
+        <email>ClaudiaFitzroy@dayrep.com</email>
+        <orderDate>10-05-2019</orderDate>
+        <orderStatus>Cancelled</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>6</movieID>
+                <movieTitle>Batman Begins</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>10</movieID>
+                <movieTitle>Evan Almighty</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>  
+    <order>
+        <orderID>105</orderID>
+        <onlineMovieStoreID>1000006</onlineMovieStoreID>
+        <email>DominicDrew@armyspy.com</email>
+        <orderDate>10-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>9</movieID>
+                <movieTitle>Diary of the wimpy kid</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>8</movieID>
+                <movieTitle>Big Fat Liar</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order> 
+    <order>
+        <orderID>106</orderID>
+        <onlineMovieStoreID>1000007</onlineMovieStoreID>
+        <email>FlynnNobelius@rhyta.com</email>
+        <orderDate>13-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>12</movieID>
+                <movieTitle>Garfield</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>15</movieID>
+                <movieTitle>John Wick</movieTitle>               
+            </moviePurchase>
+        </purchases>
+    </order> 
+    <order>
+        <orderID>107</orderID>
+        <onlineMovieStoreID>1000008</onlineMovieStoreID>
+        <email>MadisonShearer@dayrep.com</email>
+        <orderDate>20-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>9</movieID>
+                <movieTitle>Diary of the wimpy kid</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>8</movieID>
+                <movieTitle>Big Fat Liar</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>   
+    <order>
+        <orderID>108</orderID>
+        <onlineMovieStoreID>1000008</onlineMovieStoreID>
+        <email>MadisonShearer@dayrep.com</email>
+        <orderDate>20-05-2019</orderDate>
+        <orderStatus>Cancelled</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>9</movieID>
+                <movieTitle>Diary of the wimpy kid</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>8</movieID>
+                <movieTitle>Big Fat Liar</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order> 
+    <order>
+        <orderID>109</orderID>
+        <onlineMovieStoreID>1000009</onlineMovieStoreID>
+        <email>TylerBelbin@rhyta.com</email>
+        <orderDate>23-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>15</movieID>
+                <movieTitle>John Wick</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>20</movieID>
+                <movieTitle>Inception</movieTitle>               
+            </moviePurchase>
+            <moviePurchase>
+                 <movieID>6</movieID>
+                 <movieTitle>Batman Begins</movieTitle>           
+            </moviePurchase>
+        </purchases>
+    </order>  
+    <order>
+        <orderID>110</orderID>
+        <onlineMovieStoreID>1000010</onlineMovieStoreID>
+        <email>MadeleineRays@teleworm.us</email>
+        <orderDate>22-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>11</movieID>
+                <movieTitle>Ferris Bueller's Day off</movieTitle>
+            </moviePurchase>
+        </purchases>
+    </order> 
+    <order>
+        <orderID>111</orderID>
+        <onlineMovieStoreID>1000010</onlineMovieStoreID>
+        <email>MiaLambrick@rhyta.com</email>
+        <orderDate>28-05-2019</orderDate>
+        <orderStatus>Cancelled</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>7</movieID>
+                <movieTitle>Blade</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>10</movieID>
+                <movieTitle>Evan Almighty</movieTitle>              
+            </moviePurchase>
+        </purchases>
+    </order> 
+    <order>
+        <orderID>112</orderID>
+        <onlineMovieStoreID>1000012</onlineMovieStoreID>
+        <email>calebJoske@jourrapide.com</email>
+        <orderDate>30-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>10</movieID>
+                <movieTitle>Evan Almighty</movieTitle>              
+            </moviePurchase>
+        </purchases>
+    </order>   
+    <order>
+        <orderID>113</orderID>
+        <onlineMovieStoreID>1000012</onlineMovieStoreID>
+        <email>calebJoske@jourrapide.com</email>
+        <orderDate>30-05-2019</orderDate>
+        <orderStatus>Cancelled</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>16</movieID>
+                <movieTitle>Mad max</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>6</movieID>
+                <movieTitle>Batman Begins</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>    
+    <order>
+        <orderID>114</orderID>
+        <onlineMovieStoreID>1000013</onlineMovieStoreID>
+        <email>ElizaRendall@teleworm.us</email>
+        <orderDate>09-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>7</movieID>
+                <movieTitle>Blade</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>21</movieID>
+                <movieTitle>Jingle all the way</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>    
+    <order>
+        <orderID>115</orderID>
+        <onlineMovieStoreID>1000013</onlineMovieStoreID>
+        <email>ElizaRendall@teleworm.us</email>
+        <orderDate>10-05-2019</orderDate>
+        <orderStatus>Cancelled</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>19</movieID>
+                <movieTitle>I Am Legend</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>8</movieID>
+                <movieTitle>Big Fat Liar</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>  
+    <order>
+        <orderID>115</orderID>
+        <onlineMovieStoreID>1000014</onlineMovieStoreID>
+        <email>BrockCorby@dayrep.com</email>
+        <orderDate>12-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>17</movieID>
+                <movieTitle>Mr Bean's holiday</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>  
+    <order>
+        <orderID>116</orderID>
+        <onlineMovieStoreID>1000015</onlineMovieStoreID>
+        <email>MadisonBelstead@dayrep.com</email>
+        <orderDate>15-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>15</movieID>
+                <movieTitle>John Wick</movieTitle>
+            </moviePurchase>
+        </purchases>
+    </order>    
+    <order>
+        <orderID>117</orderID>
+        <onlineMovieStoreID>1000016</onlineMovieStoreID>
+        <email>TahliaGlew@jourrapide.com</email>
+        <orderDate>19-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>14</movieID>
+                <movieTitle>Home alone</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>8</movieID>
+                <movieTitle>Big Fat Liar</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>   
+   <order>
+        <orderID>118</orderID>
+        <onlineMovieStoreID>1000018</onlineMovieStoreID>
+        <email>LukeKisch@rhyta.com</email>
+        <orderDate>25-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>13</movieID>
+                <movieTitle>Gone girl</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>    
+   <order>
+        <orderID>119</orderID>
+        <onlineMovieStoreID>1000020</onlineMovieStoreID>
+        <email>LucyCurr@rhyta.com</email>
+        <orderDate>31-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>12</movieID>
+                <movieTitle>Garfield</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>11</movieID>
+                <movieTitle>Ferris Bueller's Day off</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>    
+   <order>
+        <orderID>120</orderID>
+        <onlineMovieStoreID>1000021</onlineMovieStoreID>
+        <email>BenChapman@jourrapide.com</email>
+        <orderDate>27-05-2019</orderDate>
+        <orderStatus>Submitted</orderStatus>
+        <purchases>
+            <moviePurchase>
+                <movieID>7</movieID>
+                <movieTitle>Blade</movieTitle>
+            </moviePurchase>
+            <moviePurchase>
+                <movieID>9</movieID>
+                <movieTitle>Diary of the wimpy kid</movieTitle>                
+            </moviePurchase>
+        </purchases>
+    </order>                                          
 </orders>

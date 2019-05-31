@@ -28,7 +28,6 @@
     </xsl:template>
     
     <xsl:template match="movies">
-        <!--<xsl:apply-templates select="movie/>-->
         <div class="container border">
             <table cellpadding="10" style="width: 100%">
                 <thead>

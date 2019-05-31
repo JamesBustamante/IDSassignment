@@ -28,6 +28,8 @@ public class Order implements Serializable{
     @XmlElementWrapper(name = "purchases")
     @XmlElement(name = "moviePurchase")
     private ArrayList<Movie> purchases;
+    @XmlElement(name = "orderDate")
+    private String orderDate;
   
     
     public Order(){
@@ -57,6 +59,14 @@ public class Order implements Serializable{
      */
     public ArrayList<Movie> getPurchases() {
         return purchases;
+    }
+    
+    public String getTitles(){
+        String i = new String();
+        for(Movie movie : purchases){
+            i += movie.getMovieTitle() + ", ";
+        }
+        return i;
     }
 
     /**
@@ -139,6 +149,24 @@ public class Order implements Serializable{
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
+    
+    /**
+     * getter for orderDate
+     *
+     * @return orderDate
+     */
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    /**
+     * creates an instance of orderDate
+     *
+     * @param orderDate
+     */
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
+    }    
 
     /**
      * returns a boolean for email without whitespace

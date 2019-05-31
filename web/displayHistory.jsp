@@ -46,34 +46,6 @@
         }
     }
     
-//    Movies movies = movieApp.getMovies();
-//    ArrayList<Movie> all = movies.getMovies();
-//    ArrayList<Movie> match = new ArrayList();
-    
-//    if(multiMovieOrder.movies.contains(title)){
-//        for(String movie : multiMovieOrder.movies){
-//            for(Movie m : all){
-//                if(m.getMovieTitle().equalsIgnoreCase(movie)){
-//                    match.add(m);
-//                }          
-//            }
-//        }        
-//    }else {
-//        multiMovieOrder.movies.add(title);    
-//        for(String movie : multiMovieOrder.movies){
-//            for(Movie m : all){
-//                if(m.getMovieTitle().equalsIgnoreCase(movie) && multiMovieOrder.movies.contains(movie)){
-//                    match.add(m);
-//                }          
-//            }
-//        }
-//        out.println(match.size());
-//    }
-//    
-//
-//    if(multiMovieOrder.movies.size() == 1 && multiMovieOrder.movies.contains(null)){
-//        multiMovieOrder.movies.clear();
-//    }
 %>
 
 <c:set var = "xmltext">
@@ -83,6 +55,7 @@
             <orderID><%= order.getOrderID()%></orderID>
             <orderStatus><%=order.getOrderStatus()%></orderStatus>
             <onlineMovieStoreID><%=order.getID()%></onlineMovieStoreID>
+            <orderDate>04/06/2019</orderDate>
         </order>
         <%}%>
     </orders>

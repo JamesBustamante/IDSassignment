@@ -22,7 +22,7 @@
         <section>
             <div class="container">
                 <div class="col-md-10 offset-md-3 text-right mt-2">
-                    <a class="btn btn-light" href="register.jsp">Register</a>
+                    <a class="btn btn-primary" href="register.jsp">Register</a>
                 </div>
                 <div class="col-md-6 offset-md-3 text-center">
                     <h1 class="display-4"><b>Online Movie System</b></h1>

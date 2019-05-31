@@ -44,7 +44,6 @@
                 }          
             }
         }
-        out.println(match.size());
     }
     
 

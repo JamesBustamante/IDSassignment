@@ -56,7 +56,7 @@ public class Orders implements Serializable {
     public Order getOrder(String orderID) {
         // For each order in the list...
         for (Order order : orders) {
-            if (order.getID().equals(orderID))
+            if (order.getOrderID().equals(orderID))
                 return order; // Login correct. Return this user.
         }
         return null; // Login incorrect. Return null.
